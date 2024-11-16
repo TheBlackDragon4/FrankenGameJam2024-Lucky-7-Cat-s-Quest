@@ -20,6 +20,7 @@ config/icon="res://images/icons/icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 MenuTemplateManager="*res://addons/EasyMenus/Nodes/menu_template_manager.tscn"
 QuestSystem="*res://addons/quest_system/quest_manager.gd"
+InteractionManager="*res://interactables/InteractionManager.tscn"
 
 [display]
 
