@@ -1,10 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://frxh3f3tt7xi"]
+[gd_scene load_steps=4 format=3 uid="uid://frxh3f3tt7xi"]
 
 [ext_resource type="Texture2D" uid="uid://bmptr2au1cu8q" path="res://images/main-Scene/Main-Scene.jpg" id="1_w58nr"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_xxn6q"]
+[ext_resource type="PackedScene" uid="uid://rw7gdui8lu3n" path="res://addons/EasyMenus/Scenes/pause_menu.tscn" id="3_fmvus"]
 
 [node name="Main" type="Node2D"]
+position = Vector2(960, 540)
+script = ExtResource("1_xxn6q")
 
 [node name="Main-scene" type="Sprite2D" parent="."]
-position = Vector2(-7.62939e-06, -1)
-scale = Vector2(2.97412, 2.04688)
+z_index = -1
+position = Vector2(-63, -0.500669)
+scale = Vector2(2.97412, 2.10742)
 texture = ExtResource("1_w58nr")
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_fmvus")]
+visible = false
+
+[node name="OptionsMenu" parent="PauseMenu" index="2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -954.0
+offset_top = -540.0
+offset_right = 966.0
+offset_bottom = 540.0
+
+[editable path="PauseMenu"]
