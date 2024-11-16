@@ -11,7 +11,9 @@ script/source = "extends ButtonElement
 	\"ui_up\": \"Up\",
 	\"ui_down\": \"Down\",
 	\"ui_left\": \"Left\",
-	\"ui_right\": \"Right\",
+	\"ui_right\": \"Yiha\",
+	\"input_inventory\": \"David\",
+	\"input_action\": \"Action\",
 }
 
 # Path to the settings save file
@@ -158,8 +160,12 @@ func verify_settings_data(data_: Dictionary) -> void:
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -1.0
+offset_right = -2.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Input Settings"
+text = "Key Bindings"
 script = SubResource("GDScript_te2ja")
 ElementPanelScene = ExtResource("1_6pc66")
