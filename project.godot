@@ -25,6 +25,7 @@ QuestSystem="*res://addons/quest_system/quest_manager.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=2
 
 [editor_plugins]
