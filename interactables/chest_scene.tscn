@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://dx77dsubxjbks"]
+
+[ext_resource type="Script" path="res://interactables/chest_scene.gd" id="1_4bx02"]
+[ext_resource type="Texture2D" uid="uid://ydlltr5xm66r" path="res://images/Tilemaps/TopDown/Objects/chest_closed.png" id="1_axdqh"]
+[ext_resource type="PackedScene" uid="uid://bq4q0jms15ge3" path="res://interactables/interaction area.tscn" id="2_3k7fx"]
+[ext_resource type="Texture2D" uid="uid://d0ch4saxu1pl4" path="res://images/Tilemaps/TopDown/Objects/chest_open.png" id="4_osi0a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0w0p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yve6h"]
+radius = 29.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_4bx02")
+
+[node name="SpriteClosed" type="Sprite2D" parent="."]
+z_index = 3
+texture_filter = 1
+texture = ExtResource("1_axdqh")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+scale = Vector2(0.800001, 0.800001)
+shape = SubResource("RectangleShape2D_x0w0p")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_3k7fx")]
+action_name = "Open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_yve6h")
+
+[node name="SpriteOpen" type="Sprite2D" parent="."]
+visible = false
+z_index = 3
+texture_filter = 1
+texture = ExtResource("4_osi0a")

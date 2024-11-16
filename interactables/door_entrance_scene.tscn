@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtrveru3rk6ec"]
+
+[ext_resource type="Script" path="res://interactables/door_entrance_scene.gd" id="1_kx42x"]
+[ext_resource type="Texture2D" uid="uid://ciifypgdoog55" path="res://images/Tilemaps/TopDown/Walls/wooden_door_closed.png" id="2_4d2jl"]
+[ext_resource type="PackedScene" uid="uid://bq4q0jms15ge3" path="res://interactables/interaction area.tscn" id="3_egik6"]
+[ext_resource type="Texture2D" uid="uid://22w88qv1n0bt" path="res://images/Tilemaps/TopDown/Walls/wooden_door_open.png" id="4_odqns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vuenj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bochk"]
+radius = 29.0
+
+[node name="DoorEntranceScene" type="StaticBody2D"]
+script = ExtResource("1_kx42x")
+
+[node name="SpriteClosed" type="Sprite2D" parent="."]
+z_index = 3
+texture_filter = 1
+texture = ExtResource("2_4d2jl")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+scale = Vector2(0.800001, 0.800001)
+shape = SubResource("RectangleShape2D_vuenj")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_egik6")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_bochk")
+
+[node name="SpriteOpen" type="Sprite2D" parent="."]
+visible = false
+z_index = 3
+texture_filter = 1
+texture = ExtResource("4_odqns")
