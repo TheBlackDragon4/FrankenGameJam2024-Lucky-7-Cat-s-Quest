@@ -14,12 +14,22 @@ config/name="Franken GameJam 2024"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://images/icons/icon.svg"
 
+[autoload]
+
+GGS="*res://addons/ggs/plugin/singleton/ggs.tscn"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+QuestSystem="*res://addons/quest_system/quest_manager.gd"
+
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/vsync/vsync_mode=2
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/quest_system/plugin.cfg")
 
 [rendering]
 
