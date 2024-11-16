@@ -24,7 +24,6 @@ animations = [{
 self_modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 custom_minimum_size = Vector2(9, 9)
-anchors_preset = -1
 offset_right = 9.0
 offset_bottom = 9.0
 script = ExtResource("1_sqm7u")

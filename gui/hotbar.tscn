@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" path="res://gui/lifebar.gd" id="1_84mco"]
 
-[node name="hotbar" type="Container"]
-
-[node name="lifebar" type="HBoxContainer" parent="."]
+[node name="lifebar" type="HBoxContainer"]
 texture_filter = 1
-layout_mode = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -39.0
+offset_bottom = 9.0
+grow_horizontal = 0
 theme_override_constants/separation = 1
 script = ExtResource("1_84mco")
