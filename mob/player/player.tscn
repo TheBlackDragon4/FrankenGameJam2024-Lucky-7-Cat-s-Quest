@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://egesikv1ec5t"]
+
+[ext_resource type="Texture2D" uid="uid://6og8snistbck" path="res://images/icons/icon_default.svg" id="1_2vh37"]
+[ext_resource type="Script" path="res://mob/player/player.gd" id="1_ewrr2"]
+[ext_resource type="Texture2D" uid="uid://c1bucnnh4pa85" path="res://images/icons/icon_down.svg" id="3_15vb5"]
+[ext_resource type="Texture2D" uid="uid://cyfr342lb5juu" path="res://images/icons/icon_up.svg" id="4_saknc"]
+[ext_resource type="Texture2D" uid="uid://51vctip3sd5" path="res://images/icons/icon_left.svg" id="5_odaub"]
+[ext_resource type="Texture2D" uid="uid://dg4q8basnvaly" path="res://images/icons/icon_right.svg" id="6_8ehiw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_clefc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2vh37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_15vb5")
+}],
+"loop": true,
+"name": &"crouch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2vh37")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2vh37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_saknc")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2vh37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_odaub")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2vh37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8ehiw")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y22yq"]
+size = Vector2(28, 26)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ewrr2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_clefc")
+animation = &"walk_left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_y22yq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
