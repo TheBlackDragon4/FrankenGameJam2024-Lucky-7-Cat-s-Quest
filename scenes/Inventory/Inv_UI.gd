@@ -17,6 +17,8 @@ var oldCraftingPos
 
 var invMovementAllowed = true
 
+var postcard = load("res://images/icons/postcard.png")
+
 #@onready var dialog = $DeleteDialog
 #@onready var equipButton = $DeleteDialog/HBoxContainer/Equip
 #@onready var deleteButton = $DeleteDialog/HBoxContainer/Delete
@@ -192,6 +194,7 @@ func _input(_event):
 		if currentPos > -1:
 			selectedSlot = slotArray[currentPos]
 			selectedSlot.get_node("Sprite2D").animation = "selected"
+			selectedSlot.get_node("CenterContainer/Panel/Item_Display").texture = postcard
 		#elif craftingPos > -1:
 			#selectedSlotCrafting = craftArray[craftingPos]
 			#selectedSlotCrafting.get_node("Sprite2D").animation = "selected"
@@ -221,7 +224,7 @@ func _input(_event):
 			#update_slots()
 
 func close():
-	get_parent().isFreezed = false
+	$"..".isFreezed = false
 	inv_open = false
 	visible = false
 	#dialog.visible = false

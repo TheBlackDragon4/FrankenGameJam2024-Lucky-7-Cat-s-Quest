@@ -34,7 +34,7 @@ anchor_bottom = 0.051
 offset_left = -26.88
 offset_top = -27.0
 offset_right = -0.68
-offset_bottom = -0.0800018
+offset_bottom = -0.079998
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gx4ym")
@@ -63,6 +63,7 @@ offset_right = 27.5
 offset_bottom = 27.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.175238, 0.0999666)
 
 [node name="Panel" type="Panel" parent="CenterContainer"]
 layout_mode = 2
