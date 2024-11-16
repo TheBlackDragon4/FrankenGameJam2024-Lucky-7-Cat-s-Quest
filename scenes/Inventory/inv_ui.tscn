@@ -1,0 +1,137 @@
+[gd_scene load_steps=5 format=3 uid="uid://8152nqo5ofbu"]
+
+[ext_resource type="Script" path="res://scenes/Inventory/Inv_UI.gd" id="1_4lb87"]
+[ext_resource type="Texture2D" uid="uid://ce1pcd1axv4ql" path="res://images/Inventory.png" id="2_dusis"]
+[ext_resource type="PackedScene" uid="uid://dpj7yi1pom1hq" path="res://scenes/Inventory/inv_ui_slot.tscn" id="3_frcr7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xk7g7"]
+blend_mode = 1
+
+[node name="Inv_UI" type="Control"]
+material = SubResource("CanvasItemMaterial_xk7g7")
+custom_minimum_size = Vector2(86, 66)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1676.0
+offset_bottom = -893.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4lb87")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 244.0
+offset_bottom = 187.0
+texture = ExtResource("2_dusis")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Inv_UI_Slot1" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 60.0
+offset_top = 5.0
+offset_right = 115.0
+offset_bottom = 60.0
+focus_neighbor_right = NodePath("../Inv_UI_Slot2")
+focus_neighbor_bottom = NodePath("../Inv_UI_Slot5")
+focus_mode = 2
+
+[node name="Inv_UI_Slot2" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 130.0
+offset_top = 5.0
+offset_right = 185.0
+offset_bottom = 60.0
+focus_neighbor_right = NodePath("../Inv_UI_Slot3")
+focus_neighbor_bottom = NodePath("../Inv_UI_Slot6")
+focus_mode = 2
+
+[node name="Inv_UI_Slot3" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20.0
+offset_top = 65.0
+offset_right = 75.0
+offset_bottom = 120.0
+focus_neighbor_left = NodePath("../Inv_UI_Slot2")
+focus_neighbor_right = NodePath("../Inv_UI_Slot4")
+focus_neighbor_bottom = NodePath("../Inv_UI_Slot7")
+focus_mode = 2
+
+[node name="Inv_UI_Slot4" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 95.0
+offset_top = 65.0
+offset_right = 150.0
+offset_bottom = 120.0
+focus_neighbor_left = NodePath("../Inv_UI_Slot3")
+focus_mode = 2
+
+[node name="Inv_UI_Slot5" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 170.0
+offset_top = 65.0
+offset_right = 225.0
+offset_bottom = 120.0
+focus_neighbor_right = NodePath("../Inv_UI_Slot6")
+focus_mode = 2
+
+[node name="Inv_UI_Slot6" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 60.0
+offset_top = 125.0
+offset_right = 115.0
+offset_bottom = 180.0
+focus_neighbor_left = NodePath("../Inv_UI_Slot5")
+focus_neighbor_top = NodePath("../Inv_UI_Slot2")
+focus_neighbor_right = NodePath(".")
+focus_mode = 2
+
+[node name="Inv_UI_Slot7" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 130.0
+offset_top = 125.0
+offset_right = 185.0
+offset_bottom = 180.0
+focus_neighbor_left = NodePath("../Inv_UI_Slot6")
+focus_neighbor_top = NodePath("../Inv_UI_Slot3")
+focus_mode = 2
