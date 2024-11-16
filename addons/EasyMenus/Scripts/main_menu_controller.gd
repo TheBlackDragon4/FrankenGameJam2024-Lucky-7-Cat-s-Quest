@@ -2,7 +2,7 @@ extends Control
 signal start_game_pressed
 
 @onready var start_game_button: Button = $%StartGameButton
-@onready var options_menu: Control = $%OptionsMenu
+@onready var options_menu: Control = $%Settings
 @onready var content: Control = $%Content 
 
 func _ready():
@@ -14,7 +14,7 @@ func quit():
 func open_options():
 	options_menu.show()
 	content.hide()
-	options_menu.on_open()
+	#options_menu.on_open()
 	
 func close_options():
 	content.show();
