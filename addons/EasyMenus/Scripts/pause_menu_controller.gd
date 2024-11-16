@@ -2,6 +2,7 @@ extends Control
 signal resume
 signal back_to_main_pressed
 
+
 @onready var content : VBoxContainer = $%Content
 @onready var options_menu : Control = $%OptionsMenu
 @onready var resume_game_button: Button = $%ResumeGameButton
