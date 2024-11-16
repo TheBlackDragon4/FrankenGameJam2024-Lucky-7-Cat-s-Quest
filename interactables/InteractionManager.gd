@@ -8,6 +8,7 @@ var can_interact = true
 
 func register_area(area: InteractionArea):
 	active_areas.push_back(area)
+	player = get_tree().get_first_node_in_group("player")
 
 func unregister_area(area: InteractionArea):
 	var index = active_areas.find(area)
