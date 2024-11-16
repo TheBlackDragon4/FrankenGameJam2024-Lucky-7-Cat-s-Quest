@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bmptr2au1cu8q" path="res://images/main-Scene/Main-Scene.jpg" id="1_w58nr"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xoiis"]
-[ext_resource type="PackedScene" uid="uid://djcaqtomxi8l6" path="res://scenes/entrance_template.tscn" id="2_hm3x6"]
 [ext_resource type="Texture2D" uid="uid://3t8chqmfypk1" path="res://images/Tilemaps/decor_8x8.png" id="3_s0emn"]
 [ext_resource type="Texture2D" uid="uid://bp5d4bb7xu4bj" path="res://images/Tilemaps/decor_16x16.png" id="4_d5h1q"]
+[ext_resource type="PackedScene" uid="uid://v5cxloahg4oq" path="res://scenes/entrance_template_interactable.tscn" id="4_vl35h"]
 [ext_resource type="Texture2D" uid="uid://duxnxnagd6ge4" path="res://images/Tilemaps/walls/walls.png" id="5_42ayh"]
 [ext_resource type="Texture2D" uid="uid://bwv07exma57ns" path="res://images/Tilemaps/walls/wooden_door.png" id="6_4h62c"]
 [ext_resource type="Texture2D" uid="uid://dansg185qe06l" path="res://images/Tilemaps/walls/wooden_door_b.png" id="7_63skh"]
@@ -151,6 +151,10 @@ sources/5 = SubResource("TileSetAtlasSource_1gvfy")
 [node name="Main" type="Node2D"]
 script = ExtResource("1_xoiis")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(309, 183)
+zoom = Vector2(3.2, 3.2)
+
 [node name="Main-scene" type="Sprite2D" parent="."]
 position = Vector2(305.813, 182.5)
 scale = Vector2(1.19214, 0.708985)
@@ -158,9 +162,11 @@ texture = ExtResource("1_w58nr")
 
 [node name="Node" type="Node" parent="."]
 
-[node name="Entrance" parent="Node" instance=ExtResource("2_hm3x6")]
-position = Vector2(483, 245)
+[node name="Entrance2" parent="Node" instance=ExtResource("4_vl35h")]
+position = Vector2(464, 243)
 sceneChanger = "/scenes/main_scene"
+hide_sprites = true
+new_gamemode = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-87, -260)
@@ -201,9 +207,5 @@ offset_right = 56.0
 offset_bottom = 24.0
 grow_horizontal = 1
 scale = Vector2(8, 8)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(309, 183)
-zoom = Vector2(3.2, 3.2)
 
 [editable path="PauseMenu"]

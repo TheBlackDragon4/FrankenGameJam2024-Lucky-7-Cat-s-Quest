@@ -3,16 +3,37 @@ extends Area2D
 var sceneChangePath = "res://"
 var sceneChangeExtention = ".tscn"
 @export var sceneChanger: String = ""
+@export var activate_on_collision: bool = true
+@export var hide_sprites: bool = false
+@export var new_gamemode: int = 0
+
+@onready var interaction_area: InteractionArea = $InteractionArea
+@onready var sprite_open: Sprite2D = $SpriteOpen
+@onready var sprite_closed: Sprite2D = $SpriteClosed
+@onready var event_collision: CollisionShape2D = $InteractionArea/CollisionShape2D
 
 func _ready():
-	pass 
+	if hide_sprites:
+		sprite_open.visible = false
+		sprite_closed.visible = false
+	if activate_on_collision:
+		event_collision.disabled = true
+	else:
+		$CollisionShape2D.disabled = true
+		interaction_area.interact = Callable(self, "_on_interact")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
-	await get_tree().create_timer(0.1).timeout
-	get_tree().change_scene_to_file(sceneChangePath + sceneChanger + sceneChangeExtention)
-	GamemodeHandler._update_gamemode(1)
+	if activate_on_collision:
+		await get_tree().create_timer(0.1).timeout
+		get_tree().change_scene_to_file(sceneChangePath + sceneChanger + sceneChangeExtention)
+		GamemodeHandler._update_gamemode(new_gamemode)
 	
+
+func _on_interact():	
+	get_tree().change_scene_to_file(sceneChangePath + sceneChanger + sceneChangeExtention)
+	GamemodeHandler._update_gamemode(new_gamemode)
+	#GamemodeHandler.isFreezed = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bcf6c0ghkv687"]
+[gd_scene load_steps=31 format=4 uid="uid://bcf6c0ghkv687"]
 
 [ext_resource type="Texture2D" uid="uid://qii51n4l2jdk" path="res://images/Tilemaps/TopDown/Terrain/plains.png" id="2_chao5"]
 [ext_resource type="Texture2D" uid="uid://vmjxrax42nii" path="res://images/Tilemaps/TopDown/Terrain/Cliffs.png" id="3_3fu24"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dx77dsubxjbks" path="res://interactables/chest_scene.tscn" id="14_kafug"]
 [ext_resource type="PackedScene" uid="uid://dtrveru3rk6ec" path="res://interactables/door_entrance_scene.tscn" id="15_7sdch"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="16_fxlap"]
+[ext_resource type="PackedScene" uid="uid://v5cxloahg4oq" path="res://scenes/entrance_template_interactable.tscn" id="16_pb8vh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1xp0w"]
 
@@ -1339,3 +1340,8 @@ position = Vector2(408, 200)
 position = Vector2(408, 222)
 scale = Vector2(0.5, 0.5)
 collision_layer = 3
+
+[node name="Entrance" parent="." instance=ExtResource("16_pb8vh")]
+position = Vector2(240, 262)
+sceneChanger = "/mob/player/test"
+activate_on_collision = false

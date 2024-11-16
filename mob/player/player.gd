@@ -4,12 +4,9 @@ extends CharacterBody2D
 var speed = 300.0
 const JUMP_VELOCITY = -400.0
 
-var isFreezed = false
-
-
 
 func _physics_process(delta):
-	if not isFreezed:
+	if not GamemodeHandler.isFreezed:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta

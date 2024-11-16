@@ -22,6 +22,7 @@ MenuTemplateManager="*res://addons/EasyMenus/Nodes/menu_template_manager.tscn"
 QuestSystem="*res://addons/quest_system/quest_manager.gd"
 InteractionManager="*res://interactables/InteractionManager.tscn"
 GamemodeHandler="*res://scripts/gamemode_handler.gd"
+time="*res://scripts/time_library.gd"
 
 [display]
 

@@ -224,7 +224,7 @@ func _input(_event):
 			#update_slots()
 
 func close():
-	$"..".isFreezed = false
+	GamemodeHandler.isFreezed = false
 	inv_open = false
 	visible = false
 	#dialog.visible = false
@@ -232,7 +232,7 @@ func close():
 	invMovementAllowed = true
 
 func open():
-	get_parent().isFreezed = true
+	GamemodeHandler.isFreezed = true
 	inv_open = true
 	visible = true
 	#if currentPos > -1:
