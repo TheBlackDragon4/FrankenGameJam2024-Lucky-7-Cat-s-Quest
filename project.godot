@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Franken GameJam 2024"
+run/main_scene="res://addons/EasyMenus/Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://images/icons/icon.svg"
 
@@ -19,6 +20,7 @@ config/icon="res://images/icons/icon.svg"
 GGS="*res://addons/ggs/plugin/singleton/ggs.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 QuestSystem="*res://addons/quest_system/quest_manager.gd"
+MenuTemplateManager="*res://addons/EasyMenus/Nodes/menu_template_manager.tscn"
 
 [display]
 
@@ -29,7 +31,7 @@ window/vsync/vsync_mode=2
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/quest_system/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/quest_system/plugin.cfg")
 
 [rendering]
 
