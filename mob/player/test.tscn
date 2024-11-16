@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bwv07exma57ns" path="res://images/Tilemaps/walls/wooden_door.png" id="5_xmp4h"]
 [ext_resource type="Texture2D" uid="uid://dansg185qe06l" path="res://images/Tilemaps/walls/wooden_door_b.png" id="6_r0vg5"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ep0xr"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lbyfk"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wekhe"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gyojy"]
 texture = ExtResource("2_rh8xa")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -20,7 +20,7 @@ texture = ExtResource("2_rh8xa")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_do1q4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4j3p"]
 texture = ExtResource("3_c5bdt")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
@@ -62,7 +62,7 @@ texture = ExtResource("3_c5bdt")
 3:4/0 = 0
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_svypx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nm4wc"]
 texture = ExtResource("4_26u0k")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, 1.32433, -8, 1.32433)
@@ -123,12 +123,12 @@ texture = ExtResource("4_26u0k")
 5:5/0 = 0
 5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 0.706308, 8, 0.706308, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4vpif"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_girld"]
 texture = ExtResource("5_xmp4h")
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jkfen"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxlvu"]
 texture = ExtResource("6_r0vg5")
 0:0/0 = 0
 1:0/0 = 0
@@ -136,12 +136,12 @@ texture = ExtResource("6_r0vg5")
 [sub_resource type="TileSet" id="TileSet_nhtd3"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_ep0xr")
-sources/1 = SubResource("TileSetAtlasSource_wekhe")
-sources/2 = SubResource("TileSetAtlasSource_do1q4")
-sources/3 = SubResource("TileSetAtlasSource_svypx")
-sources/4 = SubResource("TileSetAtlasSource_4vpif")
-sources/5 = SubResource("TileSetAtlasSource_jkfen")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_lbyfk")
+sources/1 = SubResource("TileSetAtlasSource_gyojy")
+sources/2 = SubResource("TileSetAtlasSource_b4j3p")
+sources/3 = SubResource("TileSetAtlasSource_nm4wc")
+sources/4 = SubResource("TileSetAtlasSource_girld")
+sources/5 = SubResource("TileSetAtlasSource_jxlvu")
 
 [node name="Test" type="Node2D"]
 position = Vector2(70, 73)
