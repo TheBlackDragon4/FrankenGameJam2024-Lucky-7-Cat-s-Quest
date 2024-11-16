@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2cojr3jh6feq"]
+
+[ext_resource type="Script" path="res://gui/lifebar.gd" id="1_84mco"]
+
+[node name="lifebar" type="HBoxContainer"]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -39.0
+offset_bottom = 9.0
+grow_horizontal = 0
+theme_override_constants/separation = 1
+script = ExtResource("1_84mco")
