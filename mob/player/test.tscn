@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=4 uid="uid://1b6tfn57co84"]
+[gd_scene load_steps=15 format=4 uid="uid://1b6tfn57co84"]
 
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="1_q2cl6"]
 [ext_resource type="Texture2D" uid="uid://3t8chqmfypk1" path="res://images/Tilemaps/decor_8x8.png" id="2_rh8xa"]
+[ext_resource type="PackedScene" uid="uid://8152nqo5ofbu" path="res://scenes/Inventory/inv_ui.tscn" id="2_t4i7u"]
 [ext_resource type="Texture2D" uid="uid://bp5d4bb7xu4bj" path="res://images/Tilemaps/decor_16x16.png" id="3_c5bdt"]
 [ext_resource type="Texture2D" uid="uid://duxnxnagd6ge4" path="res://images/Tilemaps/walls/walls.png" id="4_26u0k"]
 [ext_resource type="Texture2D" uid="uid://bwv07exma57ns" path="res://images/Tilemaps/walls/wooden_door.png" id="5_xmp4h"]
 [ext_resource type="Texture2D" uid="uid://dansg185qe06l" path="res://images/Tilemaps/walls/wooden_door_b.png" id="6_r0vg5"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ep0xr"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lbyfk"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wekhe"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gyojy"]
 texture = ExtResource("2_rh8xa")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -20,7 +21,7 @@ texture = ExtResource("2_rh8xa")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_do1q4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4j3p"]
 texture = ExtResource("3_c5bdt")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
@@ -62,7 +63,7 @@ texture = ExtResource("3_c5bdt")
 3:4/0 = 0
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_svypx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nm4wc"]
 texture = ExtResource("4_26u0k")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, 1.32433, -8, 1.32433)
@@ -123,12 +124,12 @@ texture = ExtResource("4_26u0k")
 5:5/0 = 0
 5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 0.706308, 8, 0.706308, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4vpif"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_girld"]
 texture = ExtResource("5_xmp4h")
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jkfen"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxlvu"]
 texture = ExtResource("6_r0vg5")
 0:0/0 = 0
 1:0/0 = 0
@@ -136,18 +137,24 @@ texture = ExtResource("6_r0vg5")
 [sub_resource type="TileSet" id="TileSet_nhtd3"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_ep0xr")
-sources/1 = SubResource("TileSetAtlasSource_wekhe")
-sources/2 = SubResource("TileSetAtlasSource_do1q4")
-sources/3 = SubResource("TileSetAtlasSource_svypx")
-sources/4 = SubResource("TileSetAtlasSource_4vpif")
-sources/5 = SubResource("TileSetAtlasSource_jkfen")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_lbyfk")
+sources/1 = SubResource("TileSetAtlasSource_gyojy")
+sources/2 = SubResource("TileSetAtlasSource_b4j3p")
+sources/3 = SubResource("TileSetAtlasSource_nm4wc")
+sources/4 = SubResource("TileSetAtlasSource_girld")
+sources/5 = SubResource("TileSetAtlasSource_jxlvu")
 
 [node name="Test" type="Node2D"]
 position = Vector2(70, 73)
 
 [node name="Player" parent="." instance=ExtResource("1_q2cl6")]
 position = Vector2(484, 394)
+
+[node name="Inv_UI" parent="Player" instance=ExtResource("2_t4i7u")]
+offset_left = -125.0
+offset_top = -95.0
+offset_right = -39.0
+offset_bottom = -29.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAaACQAAgACAAAAAAAbACQAAgADAAAAAAAcACQAAgACAAAAAAAdACQAAgAAAAAAAAAeACQAAgABAAAAAAAfACQAAgACAAAAAAAgACQAAgAAAAAAAAAhACQAAgABAAAAAAAiACQAAgACAAAAAAAjACQAAgADAAAAAAAkACUAAgAAAAAAAAAlACUAAgABAAAAAAAmACUAAgACAAAAAAAnACUAAgADAAAAAAAkACQAAgAAAAAAAAAlACQAAgABAAAAAAAmACQAAgACAAAAAAAnACQAAgADAAAAAAAgACUAAgAAAAAAAAAhACUAAgABAAAAAAAiACUAAgACAAAAAAAjACUAAgADAAAAAAAcACUAAgAAAAAAAAAdACUAAgABAAAAAAAeACUAAgACAAAAAAAfACUAAgADAAAAAAAYACUAAgAAAAAAAAAZACUAAgABAAAAAAAaACUAAgACAAAAAAAbACUAAgADAAAAAAAUACUAAgAAAAAAAAAVACUAAgABAAAAAAAWACUAAgACAAAAAAAXACUAAgADAAAAAAAUACQAAgAAAAAAAAAVACQAAgABAAAAAAAWACQAAgACAAAAAAAXACQAAgADAAAAAAAYACQAAgAAAAAAAAAZACQAAgABAAAAAAAoACQAAwABAAQAAAAoACUAAwABAAUAAAApACQAAwACAAQAAAApACUAAwACAAUAAAAqACQAAwACAAQAAAAqACUAAwACAAUAAAArACQAAwACAAQAAAArACUAAwACAAUAAAAsACQAAwACAAQAAAAsACUAAwACAAUAAAAtACQAAwACAAQAAAAtACUAAwACAAUAAAAuACQAAwACAAQAAAAuACUAAwACAAUAAAAvACQAAwACAAQAAAAvACUAAwACAAUAAAAwACQAAwACAAQAAAAwACUAAwACAAUAAAAxACQAAwACAAQAAAAxACUAAwACAAUAAAAyACQAAwACAAQAAAAyACUAAwACAAUAAAAoACMABAAAAAAAAAAoACIABAAAAAAAAAApACIABAAAAAAAAAApACMABAAAAAAAAAApACEABAAAAAAAAAAoACAABAAAAAAAAAAoACEABAAAAAAAAAApACAABAAAAAAAAAAzACQAAwACAAQAAAAzACUAAwACAAUAAAA0ACQAAwACAAQAAAA0ACUAAwACAAUAAAA1ACQAAwACAAQAAAA1ACUAAwACAAUAAAA2ACQAAwACAAQAAAA2ACUAAwACAAUAAAA3ACQAAwADAAQAAAA3ACUAAwADAAUAAAA3ACMAAwADAAQAAAA3ACIAAwADAAQAAAA3ACEAAwADAAQAAAA3ACAAAwADAAQAAAA2ACAAAwABAAQAAAA2ACEAAwABAAQAAAA2ACIAAwABAAQAAAA2ACMAAwABAAQAAAA2AB8AAwACAAQAAAA3AB8AAwADAAQAAAA1AB8AAwACAAQAAAA0AB8AAwACAAQAAAAzAB8AAwACAAQAAAAyAB8AAwACAAQAAAAxAB8AAwACAAQAAAAwAB8AAwACAAQAAAAvAB8AAwACAAQAAAAuAB8AAwACAAQAAAAtAB8AAwACAAQAAAAsAB8AAwACAAQAAAArAB8AAwACAAQAAAAqAB8AAwACAAQAAAApAB8AAwACAAQAAAAoAB8AAwABAAQAAAAoAB4AAwABAAAAAAApAB4AAwACAAAAAAAqAB4AAwACAAAAAAArAB4AAwACAAAAAAAsAB4AAwACAAAAAAAtAB4AAwACAAAAAAAuAB4AAwACAAAAAAAvAB4AAwACAAAAAAAwAB4AAwACAAAAAAAxAB4AAwACAAAAAAAyAB4AAwACAAAAAAAzAB4AAwACAAAAAAA0AB4AAwACAAAAAAA1AB4AAwACAAAAAAA2AB4AAwACAAAAAAA3AB4AAwADAAAAAAA=")
