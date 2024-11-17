@@ -9,8 +9,6 @@ var isFreezed = false
 @onready var hearts_container = $ui_layer/lifebar
 
 
-var isFreezed = false
-
 var fishes: int = 4
 
 func _physics_process(delta):
@@ -142,4 +140,3 @@ func get_damage():
 	hearts_container.update_hearts(GamemodeHandler.health)
 	print(str(GamemodeHandler.health) + " health remaining.")
 	
-
