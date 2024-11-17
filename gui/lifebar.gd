@@ -8,11 +8,11 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
-func set_max_hearts(max: int) -> void:
-	for i in range(max):
+func set_max_hearts(maxNum: int) -> void:
+	for i in range(maxNum):
 		var heart = heart_gui_class.instantiate()
 		add_child(heart)
 		

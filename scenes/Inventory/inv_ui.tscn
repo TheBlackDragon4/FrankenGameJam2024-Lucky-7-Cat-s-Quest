@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://8152nqo5ofbu"]
+[gd_scene load_steps=7 format=3 uid="uid://8152nqo5ofbu"]
 
 [ext_resource type="Script" path="res://scenes/Inventory/Inv_UI.gd" id="1_4lb87"]
-[ext_resource type="Texture2D" uid="uid://ce1pcd1axv4ql" path="res://images/Inventory.png" id="2_dusis"]
+[ext_resource type="Texture2D" uid="uid://dus1gkv676uco" path="res://images/bag_opened.png" id="2_top3j"]
 [ext_resource type="PackedScene" uid="uid://dpj7yi1pom1hq" path="res://scenes/Inventory/inv_ui_slot.tscn" id="3_frcr7"]
+[ext_resource type="Texture2D" uid="uid://dboc0n66liwmx" path="res://images/postcards/postcard_small_3.png" id="4_u4e10"]
+[ext_resource type="Texture2D" uid="uid://bcu7powvnddgr" path="res://images/postcards/postcard_small_2.png" id="5_fmf1v"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xk7g7"]
 blend_mode = 1
@@ -21,117 +23,226 @@ grow_vertical = 2
 script = ExtResource("1_4lb87")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = 1
 texture_filter = 1
 layout_mode = 0
-offset_right = 244.0
-offset_bottom = 187.0
-texture = ExtResource("2_dusis")
+offset_right = 294.0
+offset_bottom = 225.0
+texture = ExtResource("2_top3j")
+region_rect = Rect2(11, 35, 47, 36)
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 6
 
 [node name="Inv_UI_Slot1" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
-layout_mode = 2
+layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 60.0
-offset_top = 5.0
-offset_right = 115.0
-offset_bottom = 60.0
-focus_neighbor_right = NodePath("../Inv_UI_Slot2")
-focus_neighbor_bottom = NodePath("../Inv_UI_Slot5")
+offset_left = 71.0
+offset_top = 60.0
+offset_right = 126.0
+offset_bottom = 115.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(8.05532, 8.86872)
 focus_mode = 2
+
+[node name="Sprite2D" parent="NinePatchRect/Inv_UI_Slot1" index="0"]
+scale = Vector2(1, 1)
+offset = Vector2(-0.07, -0.08)
+
+[node name="CenterContainer" parent="NinePatchRect/Inv_UI_Slot1" index="1"]
+scale = Vector2(0.127484, 0.0726827)
+
+[node name="Item_Display" parent="NinePatchRect/Inv_UI_Slot1/CenterContainer/Panel" index="0"]
+scale = Vector2(2.14614, 2.6937)
 
 [node name="Inv_UI_Slot2" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
-layout_mode = 2
+layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 130.0
-offset_top = 5.0
-offset_right = 185.0
-offset_bottom = 60.0
-focus_neighbor_right = NodePath("../Inv_UI_Slot3")
-focus_neighbor_bottom = NodePath("../Inv_UI_Slot6")
+offset_left = 168.0
+offset_top = 60.0
+offset_right = 223.0
+offset_bottom = 115.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(8.05532, 8.86872)
 focus_mode = 2
+
+[node name="Sprite2D" parent="NinePatchRect/Inv_UI_Slot2" index="0"]
+scale = Vector2(1, 1)
+offset = Vector2(-0.07, -0.08)
+
+[node name="CenterContainer" parent="NinePatchRect/Inv_UI_Slot2" index="1"]
+scale = Vector2(0.127484, 0.0726827)
+
+[node name="Item_Display" parent="NinePatchRect/Inv_UI_Slot2/CenterContainer/Panel" index="0"]
+scale = Vector2(2.146, 2.694)
 
 [node name="Inv_UI_Slot3" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
-layout_mode = 2
+layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 20.0
-offset_top = 65.0
-offset_right = 75.0
-offset_bottom = 120.0
-focus_neighbor_left = NodePath("../Inv_UI_Slot2")
-focus_neighbor_right = NodePath("../Inv_UI_Slot4")
-focus_neighbor_bottom = NodePath("../Inv_UI_Slot7")
+offset_left = 47.0
+offset_top = 96.0
+offset_right = 102.0
+offset_bottom = 151.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(8.05532, 8.86872)
 focus_mode = 2
+
+[node name="Sprite2D" parent="NinePatchRect/Inv_UI_Slot3" index="0"]
+scale = Vector2(1, 1)
+offset = Vector2(-0.07, -0.08)
+
+[node name="CenterContainer" parent="NinePatchRect/Inv_UI_Slot3" index="1"]
+scale = Vector2(0.127484, 0.0726827)
+
+[node name="Item_Display" parent="NinePatchRect/Inv_UI_Slot3/CenterContainer/Panel" index="0"]
+scale = Vector2(2.146, 2.694)
 
 [node name="Inv_UI_Slot4" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
-layout_mode = 2
+layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 95.0
-offset_top = 65.0
-offset_right = 150.0
-offset_bottom = 120.0
-focus_neighbor_left = NodePath("../Inv_UI_Slot3")
+offset_left = 119.0
+offset_top = 96.0
+offset_right = 174.0
+offset_bottom = 151.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(8.05532, 8.86872)
 focus_mode = 2
+
+[node name="Sprite2D" parent="NinePatchRect/Inv_UI_Slot4" index="0"]
+scale = Vector2(1, 1)
+offset = Vector2(-0.07, -0.08)
+
+[node name="CenterContainer" parent="NinePatchRect/Inv_UI_Slot4" index="1"]
+scale = Vector2(0.127484, 0.0726827)
+
+[node name="Item_Display" parent="NinePatchRect/Inv_UI_Slot4/CenterContainer/Panel" index="0"]
+scale = Vector2(2.14769, 2.694)
+texture = ExtResource("4_u4e10")
 
 [node name="Inv_UI_Slot5" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
-layout_mode = 2
+layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 170.0
-offset_top = 65.0
-offset_right = 225.0
-offset_bottom = 120.0
-focus_neighbor_right = NodePath("../Inv_UI_Slot6")
+offset_left = 192.0
+offset_top = 95.0
+offset_right = 247.0
+offset_bottom = 150.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(8.05532, 8.86872)
 focus_mode = 2
+
+[node name="Sprite2D" parent="NinePatchRect/Inv_UI_Slot5" index="0"]
+scale = Vector2(1, 1)
+offset = Vector2(-0.07, -0.08)
+
+[node name="CenterContainer" parent="NinePatchRect/Inv_UI_Slot5" index="1"]
+scale = Vector2(0.127484, 0.0726827)
+
+[node name="Item_Display" parent="NinePatchRect/Inv_UI_Slot5/CenterContainer/Panel" index="0"]
+scale = Vector2(2.146, 2.694)
 
 [node name="Inv_UI_Slot6" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
-layout_mode = 2
+layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 60.0
-offset_top = 125.0
-offset_right = 115.0
-offset_bottom = 180.0
-focus_neighbor_left = NodePath("../Inv_UI_Slot5")
-focus_neighbor_top = NodePath("../Inv_UI_Slot2")
-focus_neighbor_right = NodePath(".")
+offset_left = 72.0
+offset_top = 131.0
+offset_right = 127.0
+offset_bottom = 186.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(8.05532, 8.86872)
 focus_mode = 2
 
+[node name="Sprite2D" parent="NinePatchRect/Inv_UI_Slot6" index="0"]
+scale = Vector2(1, 1)
+offset = Vector2(-0.07, -0.08)
+
+[node name="CenterContainer" parent="NinePatchRect/Inv_UI_Slot6" index="1"]
+scale = Vector2(0.127484, 0.0726827)
+
+[node name="Item_Display" parent="NinePatchRect/Inv_UI_Slot6/CenterContainer/Panel" index="0"]
+scale = Vector2(2.146, 2.694)
+
 [node name="Inv_UI_Slot7" parent="NinePatchRect" instance=ExtResource("3_frcr7")]
-layout_mode = 2
+layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 130.0
-offset_top = 125.0
-offset_right = 185.0
-offset_bottom = 180.0
-focus_neighbor_left = NodePath("../Inv_UI_Slot6")
-focus_neighbor_top = NodePath("../Inv_UI_Slot3")
+offset_left = 169.0
+offset_top = 131.0
+offset_right = 224.0
+offset_bottom = 186.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(8.05532, 8.86872)
 focus_mode = 2
+
+[node name="Sprite2D" parent="NinePatchRect/Inv_UI_Slot7" index="0"]
+scale = Vector2(1, 1)
+offset = Vector2(-0.07, -0.08)
+
+[node name="CenterContainer" parent="NinePatchRect/Inv_UI_Slot7" index="1"]
+scale = Vector2(0.127484, 0.0726827)
+
+[node name="Item_Display" parent="NinePatchRect/Inv_UI_Slot7/CenterContainer/Panel" index="0"]
+scale = Vector2(2.146, 2.694)
+texture = ExtResource("5_fmf1v")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 3
+layout_mode = 2
+offset_left = 47.0
+offset_top = 60.0
+offset_right = 1070.0
+offset_bottom = 726.0
+scale = Vector2(0.196237, 0.158742)
+
+[editable path="NinePatchRect/Inv_UI_Slot1"]
+[editable path="NinePatchRect/Inv_UI_Slot2"]
+[editable path="NinePatchRect/Inv_UI_Slot3"]
+[editable path="NinePatchRect/Inv_UI_Slot4"]
+[editable path="NinePatchRect/Inv_UI_Slot5"]
+[editable path="NinePatchRect/Inv_UI_Slot6"]
+[editable path="NinePatchRect/Inv_UI_Slot7"]

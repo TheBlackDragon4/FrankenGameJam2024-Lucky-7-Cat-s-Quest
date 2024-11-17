@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bcf6c0ghkv687"]
+[gd_scene load_steps=31 format=4 uid="uid://bcf6c0ghkv687"]
 
 [ext_resource type="Texture2D" uid="uid://qii51n4l2jdk" path="res://images/Tilemaps/TopDown/Terrain/plains.png" id="2_chao5"]
 [ext_resource type="Texture2D" uid="uid://vmjxrax42nii" path="res://images/Tilemaps/TopDown/Terrain/Cliffs.png" id="3_3fu24"]
@@ -9,12 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://iocxgyl1h8qq" path="res://images/Tilemaps/TopDown/Walls/walls.png" id="4_oa6b8"]
 [ext_resource type="Texture2D" uid="uid://ciifypgdoog55" path="res://images/Tilemaps/TopDown/Walls/wooden_door_closed.png" id="4_s2nqs"]
 [ext_resource type="Texture2D" uid="uid://22w88qv1n0bt" path="res://images/Tilemaps/TopDown/Walls/wooden_door_open.png" id="5_rx50q"]
-[ext_resource type="PackedScene" uid="uid://mxk1b4yxvgn0" path="res://main_character_world.tscn" id="6_ijmat"]
 [ext_resource type="Texture2D" uid="uid://djal5vygfj18l" path="res://images/Tilemaps/TopDown/Objects/objects_small.png" id="9_lkqpl"]
 [ext_resource type="Texture2D" uid="uid://crus1efcjm8q8" path="res://images/Tilemaps/TopDown/Objects/trees_large.png" id="10_5ys8y"]
 [ext_resource type="Texture2D" uid="uid://b1ej50fe3ls6g" path="res://images/Tilemaps/TopDown/Objects/trees_medium.png" id="11_mbso5"]
 [ext_resource type="PackedScene" uid="uid://dx77dsubxjbks" path="res://interactables/chest_scene.tscn" id="14_kafug"]
 [ext_resource type="PackedScene" uid="uid://dtrveru3rk6ec" path="res://interactables/door_entrance_scene.tscn" id="15_7sdch"]
+[ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="16_fxlap"]
+[ext_resource type="PackedScene" uid="uid://v5cxloahg4oq" path="res://scenes/entrance_template_interactable.tscn" id="16_pb8vh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1xp0w"]
 
@@ -1306,10 +1307,6 @@ z_index = 5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 shape = SubResource("CapsuleShape2D_1xp0w")
 
-[node name="OpenWorldCharacter" parent="." instance=ExtResource("6_ijmat")]
-position = Vector2(479, 246)
-collision_layer = 3
-
 [node name="Chest" parent="." instance=ExtResource("14_kafug")]
 position = Vector2(376, 264)
 
@@ -1338,3 +1335,13 @@ tile_set = SubResource("TileSet_xwx2x")
 
 [node name="DoorEntranceScene" parent="." instance=ExtResource("15_7sdch")]
 position = Vector2(408, 200)
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("16_fxlap")]
+position = Vector2(408, 222)
+scale = Vector2(0.5, 0.5)
+collision_layer = 3
+
+[node name="Entrance" parent="." instance=ExtResource("16_pb8vh")]
+position = Vector2(240, 262)
+sceneChanger = "/mob/player/test"
+activate_on_collision = false

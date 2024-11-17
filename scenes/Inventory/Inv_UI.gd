@@ -7,15 +7,15 @@ var inv_open = false
 @onready var selectedSlot = $NinePatchRect/Inv_UI_Slot1
 #@onready var selectedSlotCrafting = $NinePatchCrafting/Craft_UI_Slot1
 var slotArray = []
-var craftArray = []
 var currentPos = 0
-var craftingPos = -1
 var selectMode = "inv" # inv or craft
 
 var firstRun = true
-var oldCraftingPos
 
 var invMovementAllowed = true
+
+var postcard = load("res://images/icons/postcard.png")
+var bigtexpath
 
 #@onready var dialog = $DeleteDialog
 #@onready var equipButton = $DeleteDialog/HBoxContainer/Equip
@@ -49,10 +49,12 @@ var cols = 3
 
 
 func _ready():	
-	#update_slots()
+	update_slots()
 	close()
 	for slot in $NinePatchRect.get_children():
 		slotArray.append(slot)
+	bigtexpath = $TextureRect
+	bigtexpath.visible = false
 	#for slot in $NinePatchCrafting.get_children()u
 	
 	# ---- Sprite gen
@@ -62,9 +64,9 @@ func _ready():
 		#textures.append(texture)
 
 #
-#func update_slots():
-	#for i in range(12):
-		#slots[i].update(Global.inv.items[i])
+func update_slots():
+	for i in range(7):
+		slots[i].update(Global.inv.items[i])
 	#for i in range(9):
 		#craft_slots[i].update(Global.craft.items[i])
 
@@ -92,7 +94,12 @@ func _input(_event):
 			#insertButton.emit_signal("pressed")
 			#craftDialog.visible = false
 			#invMovementAllowed = true
-	#if Input.is_action_just_pressed("delete_item") and craftDialog.visible:
+	var visibility_changed = false
+	if Input.is_action_just_pressed("input_action") and bigtexpath.visible == true:
+		bigtexpath.visible = false
+		invMovementAllowed = true
+		visibility_changed = true
+		
 			#removeButton.emit_signal("pressed")
 			#craftDialog.visible = false
 			#invMovementAllowed = true
@@ -199,7 +206,13 @@ func _input(_event):
 		#if Input.is_action_just_pressed("delete_item"):
 			#if Global.inv.items[currentPos] != null and currentPos != 0:
 				#dialog.visible = true
-		#if Input.is_action_just_pressed("input_action"):
+		if Input.is_action_just_pressed("input_action") and bigtexpath.visible != true and visibility_changed == false:
+			if Global.inv.items[currentPos] != null:
+				bigtexpath.texture = Global.inv.items[currentPos].bigtexture 
+				bigtexpath.visible = true
+				invMovementAllowed = false
+				
+			#selectedSlot
 			#if selectMode == "craft":
 				##craftDialog.visible = true
 				#invMovementAllowed = false
@@ -221,7 +234,7 @@ func _input(_event):
 			#update_slots()
 
 func close():
-	get_parent().isFreezed = false
+	GamemodeHandler.isFreezed = false
 	inv_open = false
 	visible = false
 	#dialog.visible = false
@@ -229,7 +242,8 @@ func close():
 	invMovementAllowed = true
 
 func open():
-	get_parent().isFreezed = true
+	GamemodeHandler.isFreezed = true
+	update_slots()
 	inv_open = true
 	visible = true
 	#if currentPos > -1:
