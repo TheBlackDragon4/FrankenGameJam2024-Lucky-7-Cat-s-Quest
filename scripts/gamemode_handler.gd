@@ -13,12 +13,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-func _update_gamemode(changeMode: int):
-	if (changeMode == 0):
-		gamemode = 0
-	else:
-		gamemode = 1
 		
 func _on_player_damaged():
 	print("player got damaged, process.")

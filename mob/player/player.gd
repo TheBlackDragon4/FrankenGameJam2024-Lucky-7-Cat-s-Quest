@@ -3,14 +3,13 @@ extends CharacterBody2D
 
 var speed = 300.0
 const JUMP_VELOCITY = -400.0
+var isFreezed = false
 @export var gamemode = 0
 
 @onready var hearts_container = $ui_layer/lifebar
 
-var isFreezed = false
-
 func _physics_process(delta):
-	if not GamemodeHandler.isFreezed:
+	if not isFreezed:
 		# Add the gravity.
 		
 		if not is_on_floor():
