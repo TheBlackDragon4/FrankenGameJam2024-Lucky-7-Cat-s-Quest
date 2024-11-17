@@ -1,6 +1,5 @@
 [gd_scene load_steps=19 format=4 uid="uid://frxh3f3tt7xi"]
 
-
 [ext_resource type="Texture2D" uid="uid://bmptr2au1cu8q" path="res://images/main-Scene/Main-Scene.jpg" id="1_w58nr"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xoiis"]
 [ext_resource type="PackedScene" uid="uid://b70mcnkjy13x3" path="res://gui/default_ui.tscn" id="2_ovnvq"]
@@ -149,33 +148,6 @@ sources/3 = SubResource("TileSetAtlasSource_dxot0")
 sources/4 = SubResource("TileSetAtlasSource_hxgvg")
 sources/5 = SubResource("TileSetAtlasSource_1gvfy")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0x1fi"]
-size = Vector2(26, 174)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_70m5u"]
-size = Vector2(149, 14)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_slnov"]
-size = Vector2(34.8438, 33.625)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7gj2"]
-size = Vector2(124, 55)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4jb0"]
-size = Vector2(26, 108)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_croac"]
-size = Vector2(56, 36)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwwtd"]
-size = Vector2(3.75, 130)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_utmuu"]
-size = Vector2(484, 7.75)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_whfls"]
-size = Vector2(133, 3)
-
 [node name="Main" type="Node2D"]
 script = ExtResource("1_xoiis")
 
@@ -214,4 +186,3 @@ position = Vector2(-354, 47)
 position = Vector2(321, 198)
 scale = Vector2(0.102447, 0.0840463)
 zoom = Vector2(2, 2)
-
