@@ -364,6 +364,8 @@ script = ExtResource("1_ewrr2")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_clefc")
 animation = &"fall"
+frame = 5
+frame_progress = 0.0049667
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
