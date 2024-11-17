@@ -26,7 +26,7 @@ func _ready():
 func _process(_delta):
 	pass
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(body: CharacterBody2D) -> void:
 	if activate_on_collision:
 		call_deferred("_change_scene")
 		# await get_tree().create_timer(0.1).timeout

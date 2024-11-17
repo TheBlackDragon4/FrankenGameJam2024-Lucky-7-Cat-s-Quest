@@ -53,7 +53,7 @@ func _process(delta):
 				6:
 					index = 6
 					tex = load("res://images/postcards/postcard_small_4.png")
-					bigtex = load("res://images/icons/postcard.jpg")
+					bigtex = load("res://images/postcards/postcard_mountain_big.png")
 					name = "Strand"
 				_:
 					index = 0

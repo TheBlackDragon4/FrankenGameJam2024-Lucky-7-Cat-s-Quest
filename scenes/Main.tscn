@@ -195,7 +195,6 @@ texture = ExtResource("1_w58nr")
 position = Vector2(464, 243)
 sceneChanger = "/scenes/main_scene"
 hide_sprites = true
-new_gamemode = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-87, -33)
