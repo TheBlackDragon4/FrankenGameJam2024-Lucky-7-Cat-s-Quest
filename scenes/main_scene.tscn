@@ -1333,7 +1333,7 @@ sources/22 = SubResource("TileSetAtlasSource_mmijl")
 sources/23 = SubResource("TileSetAtlasSource_p21o7")
 sources/0 = SubResource("TileSetAtlasSource_5qokn")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="DefaultUIElements" parent="." instance=ExtResource("1_0ryrq")]
 
