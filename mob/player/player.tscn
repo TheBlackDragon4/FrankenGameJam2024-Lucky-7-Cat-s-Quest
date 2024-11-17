@@ -366,7 +366,6 @@ sprite_frames = SubResource("SpriteFrames_clefc")
 animation = &"fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 light_mask = 2
 scale = Vector2(1.6, 1.6)
 shape = SubResource("CircleShape2D_wp36s")
