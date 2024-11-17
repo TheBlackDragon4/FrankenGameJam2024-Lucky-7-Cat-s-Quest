@@ -23,6 +23,11 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_crapp")
 
+[node name="ShapeCast2D" type="ColorRect" parent="."]
+self_modulate = Color(0.0745098, 0.0745098, 0.0745098, 0.290196)
+offset_right = 1920.0
+offset_bottom = 1080.0
+
 [node name="SettingsPanel" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
