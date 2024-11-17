@@ -126,7 +126,7 @@ text = "Code"
 
 [node name="Guys" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
 layout_mode = 2
-text = "Auto generated or ChatGPT"
+text = "Lukas, Daniel, David, Alex & Nico"
 horizontal_alignment = 2
 
 [node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
