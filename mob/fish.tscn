@@ -3,9 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bp2wy7ylpuyg5" path="res://images/Tilemaps/Underwater/fish-dart.png" id="1_c22r4"]
 [ext_resource type="Script" path="res://mob/fish.gd" id="1_hbkvj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qk57g"]
-size = Vector2(31, 14)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ueh0u"]
 atlas = ExtResource("1_c22r4")
 region = Rect2(0, 0, 39, 20)
@@ -75,16 +72,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qk57g"]
+size = Vector2(31, 14)
+
 [node name="Fish" type="CharacterBody2D"]
 position = Vector2(100, 32)
 script = ExtResource("1_hbkvj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 1)
-shape = SubResource("RectangleShape2D_qk57g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vyh8m")
 animation = &"walk_left"
 autoplay = "walk_right"
+
+[node name="Area2D" type="Area2D" parent="." groups=["fish"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_qk57g")

@@ -137,7 +137,7 @@ texture = ExtResource("1_3vnpc")
 modulate = Color(0, 0.485494, 0.485645, 1)
 position = Vector2(769, 363)
 
-[node name="Player" parent="." instance=ExtResource("8_p7uvn")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("8_p7uvn")]
 position = Vector2(359, 73)
 
 [node name="Background" type="TileMapLayer" parent="."]
