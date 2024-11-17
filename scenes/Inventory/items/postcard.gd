@@ -47,12 +47,12 @@ func _process(delta):
 						4:
 							index = 4
 							tex = load("res://images/postcards/postcard_small_2.png")
-							bigtex = load("res://images/icons/postcard.jpg")
-							name = "Strand"
+							bigtex = load("res://images/postcards/postcard_dungeon_big.png")
+							name = "Dungeon"
 						5:
 							index = 5
 							tex = load("res://images/icons/postcard.png")
-							bigtex = load("res://images/bag_closed.png")
+							bigtex = load("res://images/postcards/postcard_catchfish_big.png")
 							name = "Strand"
 						6:
 							index = 6
