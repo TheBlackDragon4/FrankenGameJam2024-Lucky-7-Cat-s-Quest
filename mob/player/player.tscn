@@ -1,5 +1,6 @@
 [gd_scene load_steps=71 format=3 uid="uid://egesikv1ec5t"]
 
+
 [ext_resource type="Script" path="res://mob/player/player.gd" id="1_ewrr2"]
 [ext_resource type="Texture2D" uid="uid://fo4gnr1iuhmw" path="res://images/cat/Idle.png" id="2_r7fdg"]
 [ext_resource type="Texture2D" uid="uid://bu8rt6y4gcqox" path="res://images/cat/jump-fall-left.png" id="2_runrl"]
@@ -477,6 +478,12 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="Inv_UI" parent="." instance=ExtResource("9_w15es")]
+z_index = 9
+offset_left = -88.0
+offset_top = -100.0
+offset_right = -2.0
+offset_bottom = -34.0
+scale = Vector2(0.565058, 0.565058)
 
 [node name="ui_layer" type="CanvasLayer" parent="."]
 

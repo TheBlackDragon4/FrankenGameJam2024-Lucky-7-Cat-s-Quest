@@ -3,16 +3,18 @@ extends CharacterBody2D
 
 var speed = 300.0
 const JUMP_VELOCITY = -400.0
+var isFreezed = false
 @export var gamemode = 0
 
 @onready var hearts_container = $ui_layer/lifebar
+
 
 var isFreezed = false
 
 var fishes: int = 4
 
 func _physics_process(delta):
-	if not GamemodeHandler.isFreezed:
+	if not isFreezed:
 		# Add the gravity.
 		
 		if not is_on_floor():
@@ -115,6 +117,7 @@ func _process(_delta):
 	pass
 
 
+
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("fish"):
 		var fish = area.get_parent()
@@ -127,3 +130,16 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			var bigtex = load("res://images/icons/fish.jpg")
 			name = "Strand"
 			Global.inv.items[index] = InvItem.new(name, tex, bigtex)
+
+func _on_static_body_2d_player_damaged() -> void:
+	get_damage()
+
+func _on_object_player_damaged() -> void:
+	get_damage()
+
+func get_damage():
+	GamemodeHandler._on_player_damaged()
+	hearts_container.update_hearts(GamemodeHandler.health)
+	print(str(GamemodeHandler.health) + " health remaining.")
+	
+

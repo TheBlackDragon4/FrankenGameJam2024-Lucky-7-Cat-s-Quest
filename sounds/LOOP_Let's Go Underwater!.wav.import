@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://2b4magmr1dpk"
+path="res://.godot/imported/LOOP_Let's Go Underwater!.wav-f5e0f5666b608c9f0c13fd3600a45cdc.sample"
+
+[deps]
+
+source_file="res://sounds/LOOP_Let's Go Underwater!.wav"
+dest_files=["res://.godot/imported/LOOP_Let's Go Underwater!.wav-f5e0f5666b608c9f0c13fd3600a45cdc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

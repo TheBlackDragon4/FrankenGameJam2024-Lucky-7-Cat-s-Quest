@@ -4,8 +4,6 @@ extends CharacterBody2D
 var speed = 60.
 const JUMP_VELOCITY = -400.0
 
-@onready var hearts_container = $ui_layer/lifebar
-
 
 var wait_time = 1.
 var last_timestamp = Time.get_unix_time_from_system()

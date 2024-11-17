@@ -5,7 +5,6 @@ var sceneChangeExtention = ".tscn"
 @export var sceneChanger: String = ""
 @export var activate_on_collision: bool = true
 @export var hide_sprites: bool = false
-@export var new_gamemode: int = 0
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var sprite_open: Sprite2D = $SpriteOpen
@@ -26,7 +25,7 @@ func _ready():
 func _process(_delta):
 	pass
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(body: CharacterBody2D) -> void:
 	if activate_on_collision:
 		call_deferred("_change_scene")
 		# await get_tree().create_timer(0.1).timeout
