@@ -23,6 +23,7 @@ QuestSystem="*res://addons/quest_system/quest_manager.gd"
 InteractionManager="*res://interactables/InteractionManager.tscn"
 GamemodeHandler="*res://scripts/gamemode_handler.gd"
 time="*res://scripts/time_library.gd"
+Global="*res://global_scripts/global.gd"
 
 [display]
 

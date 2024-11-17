@@ -1,0 +1,161 @@
+[gd_scene load_steps=22 format=3 uid="uid://c6xdlnumdbf4h"]
+
+[ext_resource type="Texture2D" uid="uid://cxe0i023on7ag" path="res://images/icons/postcard_animation.png" id="2_2e64g"]
+
+[sub_resource type="GDScript" id="GDScript_bp6fh"]
+script/source = "extends AnimatedSprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):	
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1phbd"]
+size = Vector2(22, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w5m1"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrwl5"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f2ep"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fq7x"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wknl5"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qcf0"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jriwa"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0j3wc"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amvto"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o7xb"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7f8n"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(240, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mndm3"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym456"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(288, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq7gp"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(312, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyuw4"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(336, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7afv"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(360, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pj2us"]
+atlas = ExtResource("2_2e64g")
+region = Rect2(384, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p62oi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w5m1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrwl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f2ep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fq7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wknl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qcf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jriwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0j3wc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amvto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o7xb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7f8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mndm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym456")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq7gp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyuw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7afv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pj2us")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+texture_filter = 1
+script = SubResource("GDScript_bp6fh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_1phbd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_p62oi")
+frame_progress = 0.399819
+script = SubResource("GDScript_bp6fh")
