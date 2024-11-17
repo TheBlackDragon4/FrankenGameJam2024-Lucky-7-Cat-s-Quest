@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq6tvhqcy2aps"]
+[gd_scene load_steps=4 format=3 uid="uid://dq6tvhqcy2aps"]
 
 [ext_resource type="Script" path="res://addons/EasyMenus/Scripts/main_menu_controller.gd" id="1_lbw7r"]
 [ext_resource type="PackedScene" uid="uid://qlskttl1wjr7" path="res://addons/EasyMenus/Scenes/options_menu.tscn" id="2_pwqpr"]
+[ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="3_slls3"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -78,7 +79,14 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 1
 
+[node name="Settings" parent="." node_paths=PackedStringArray("MenuPanelRef") instance=ExtResource("3_slls3")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+MenuPanelRef = NodePath("..")
+
 [connection signal="pressed" from="Content/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="Content/OptionsButton" to="." method="open_options"]
 [connection signal="pressed" from="Content/QuitButton" to="." method="quit"]
 [connection signal="close" from="OptionsMenu" to="." method="close_options"]
+[connection signal="settings_menu_closed" from="Settings" to="." method="close_options"]

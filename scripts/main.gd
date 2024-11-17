@@ -7,7 +7,7 @@ func _ready() -> void:
 	#hearts_container.set_max_hearts(7)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause"):
+	if event.is_action_pressed("ui_cancel"):
 		$PauseMenu.open_pause_menu()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
