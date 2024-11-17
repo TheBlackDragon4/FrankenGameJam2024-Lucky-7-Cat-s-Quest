@@ -1,26 +1,50 @@
 {
-	"ui_up": {
+	"input_up": {
 		"type": "keyboard",
-		"key": 4194320
+		"key": 87
 	},
-	"ui_down": {
+	"input_down": {
 		"type": "keyboard",
-		"key": 4194322
+		"key": 83
 	},
-	"ui_left": {
+	"input_left": {
 		"type": "keyboard",
-		"key": 4194319
+		"key": 65
 	},
-	"ui_right": {
+	"input_right": {
 		"type": "keyboard",
-		"key": 4194321
-	},
-	"input_inventory": {
-		"type": "keyboard",
-		"key": 0
+		"key": 68
 	},
 	"input_action": {
 		"type": "keyboard",
-		"key": 0
+		"key": 72
+	},
+	"input_inventory": {
+		"type": "keyboard",
+		"key": 74
+	},
+	"input_opt_3": {
+		"type": "keyboard",
+		"key": 75
+	},
+	"input_opt_4": {
+		"type": "keyboard",
+		"key": 76
+	},
+	"input_opt_5": {
+		"type": "keyboard",
+		"key": 85
+	},
+	"input_opt_6": {
+		"type": "keyboard",
+		"key": 73
+	},
+	"input_opt_7": {
+		"type": "keyboard",
+		"key": 79
+	},
+	"input_opt_8": {
+		"type": "keyboard",
+		"key": 80
 	}
 }
