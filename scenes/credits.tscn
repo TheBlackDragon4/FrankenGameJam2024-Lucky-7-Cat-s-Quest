@@ -149,7 +149,7 @@ layout_mode = 2
 [node name="Part" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer7"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Luna Keeper "
+text = "Luna & Spike Keeper "
 
 [node name="Guys" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer7"]
 layout_mode = 2
