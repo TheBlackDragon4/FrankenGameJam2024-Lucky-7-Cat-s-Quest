@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://b74vtdpkay2nv"]
+[gd_scene load_steps=16 format=4 uid="uid://b74vtdpkay2nv"]
 
 [ext_resource type="Texture2D" uid="uid://ncr406ndikxp" path="res://images/Tilemaps/worlds/water/background/sand.png" id="1_3vnpc"]
 [ext_resource type="PackedScene" uid="uid://c24kk85efm6h1" path="res://scenes/Inventory/items/postcard.tscn" id="7_1tlrk"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="8_p7uvn"]
+[ext_resource type="PackedScene" uid="uid://bgt0e6rxsslqm" path="res://scenes/entrance_template_interactable.tscn" id="10_butik"]
 [ext_resource type="PackedScene" uid="uid://bcnlxhaiw2h1d" path="res://scenes/Music/audio_stream_player.tscn" id="11_32d0t"]
 [ext_resource type="Texture2D" uid="uid://cbw6xxm48qkyd" path="res://images/Tilemaps/worlds/water/underwater_tileset.png" id="12_he1ea"]
 [ext_resource type="AudioStream" uid="uid://2b4magmr1dpk" path="res://sounds/LOOP_Let's Go Underwater!.wav" id="12_ikfqh"]
@@ -140,7 +141,7 @@ modulate = Color(0, 0.485494, 0.485645, 1)
 position = Vector2(769, 363)
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("8_p7uvn")]
-position = Vector2(359, 73)
+position = Vector2(144, 251)
 
 [node name="Background" type="TileMapLayer" parent="."]
 modulate = Color(1, 1, 1, 0.109804)
@@ -178,3 +179,7 @@ position = Vector2(309, 18)
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("11_32d0t")]
 stream = ExtResource("12_ikfqh")
+
+[node name="Entrance" parent="." instance=ExtResource("10_butik")]
+position = Vector2(39, 277)
+sceneChanger = "/scenes/main_scene"

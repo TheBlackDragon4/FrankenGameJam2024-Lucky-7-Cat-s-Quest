@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bwv07exma57ns" path="res://images/Tilemaps/walls/wooden_door.png" id="6_4h62c"]
 [ext_resource type="Texture2D" uid="uid://dansg185qe06l" path="res://images/Tilemaps/walls/wooden_door_b.png" id="7_63skh"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="8_01c2f"]
-[ext_resource type="PackedScene" uid="uid://m7g6luq0mlvi" path="res://scenes/speaker_node.tscn" id="10_n25yo"]
+[ext_resource type="PackedScene" path="res://scenes/speaker_node.tscn" id="10_n25yo"]
 [ext_resource type="PackedScene" uid="uid://bcnlxhaiw2h1d" path="res://scenes/Music/audio_stream_player.tscn" id="12_g32sf"]
 [ext_resource type="PackedScene" uid="uid://c24kk85efm6h1" path="res://scenes/Inventory/items/postcard.tscn" id="12_va8pm"]
 [ext_resource type="AudioStream" uid="uid://brthwqbd1ese" path="res://sounds/LOOP_Mysterious Cave.wav" id="13_22tl0"]

@@ -1,5 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://bcf6c0ghkv687"]
-
+[gd_scene load_steps=41 format=4 uid="uid://bcf6c0ghkv687"]
 
 [ext_resource type="PackedScene" path="res://gui/default_ui.tscn" id="1_0ryrq"]
 [ext_resource type="Texture2D" uid="uid://qii51n4l2jdk" path="res://images/Tilemaps/TopDown/Terrain/plains.png" id="2_chao5"]
@@ -20,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dtrveru3rk6ec" path="res://interactables/door_entrance_scene.tscn" id="15_7sdch"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="16_fxlap"]
 [ext_resource type="PackedScene" uid="uid://bgt0e6rxsslqm" path="res://scenes/entrance_template_interactable.tscn" id="16_pb8vh"]
-[ext_resource type="PackedScene" uid="uid://m7g6luq0mlvi" path="res://scenes/speaker_node.tscn" id="17_7h2sa"]
+[ext_resource type="PackedScene" path="res://scenes/speaker_node.tscn" id="17_7h2sa"]
 [ext_resource type="PackedScene" uid="uid://bcnlxhaiw2h1d" path="res://scenes/Music/audio_stream_player.tscn" id="18_tvtcd"]
 [ext_resource type="AudioStream" uid="uid://0c1lapm8y2us" path="res://sounds/LOOP_Exploring the Depths.wav" id="19_xpcnq"]
 [ext_resource type="PackedScene" path="res://interactables/damage_object.tscn" id="20_5ku0g"]
@@ -1442,7 +1441,7 @@ gamemode = 1
 
 [node name="Entrance" parent="." instance=ExtResource("16_pb8vh")]
 position = Vector2(240, 262)
-sceneChanger = "/mob/player/test"
+sceneChanger = "/scenes/Underwater"
 activate_on_collision = false
 
 [node name="Entrance2" parent="." instance=ExtResource("16_pb8vh")]

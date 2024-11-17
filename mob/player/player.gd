@@ -125,7 +125,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			print("All fishes dead")
 			var index = 5
 			var tex = load("res://images/icons/postcard.png")
-			var bigtex = load("res://images/icons/fish.jpg")
+			var bigtex = load("res://images/postcards/postcard_catchfish_big.png")
 			name = "Strand"
 			Global.inv.items[index] = InvItem.new(name, tex, bigtex)
 
