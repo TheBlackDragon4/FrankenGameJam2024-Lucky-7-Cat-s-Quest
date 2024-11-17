@@ -123,7 +123,7 @@ sources/0 = SubResource("TileSetAtlasSource_b5ats")
 sources/1 = SubResource("TileSetAtlasSource_cv3c4")
 sources/2 = SubResource("TileSetAtlasSource_bysp0")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(425.306, 394.684)
@@ -139,7 +139,7 @@ texture = ExtResource("1_3vnpc")
 modulate = Color(0, 0.485494, 0.485645, 1)
 position = Vector2(769, 363)
 
-[node name="Player" parent="." instance=ExtResource("8_p7uvn")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("8_p7uvn")]
 position = Vector2(359, 73)
 
 [node name="Background" type="TileMapLayer" parent="."]

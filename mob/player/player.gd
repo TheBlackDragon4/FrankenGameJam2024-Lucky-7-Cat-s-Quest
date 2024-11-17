@@ -8,6 +8,11 @@ var isFreezed = false
 
 @onready var hearts_container = $ui_layer/lifebar
 
+
+var isFreezed = false
+
+var fishes: int = 4
+
 func _physics_process(delta):
 	if not isFreezed:
 		# Add the gravity.
@@ -112,6 +117,20 @@ func _process(_delta):
 	pass
 
 
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("fish"):
+		var fish = area.get_parent()
+		fish.queue_free()
+		fishes-=1;
+		if fishes == 0:
+			print("All fishes dead")
+			var index = 5
+			var tex = load("res://images/icons/postcard.png")
+			var bigtex = load("res://images/icons/fish.jpg")
+			name = "Strand"
+			Global.inv.items[index] = InvItem.new(name, tex, bigtex)
+
 func _on_static_body_2d_player_damaged() -> void:
 	get_damage()
 
@@ -123,3 +142,4 @@ func get_damage():
 	hearts_container.update_hearts(GamemodeHandler.health)
 	print(str(GamemodeHandler.health) + " health remaining.")
 	
+

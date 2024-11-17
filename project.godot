@@ -38,6 +38,11 @@ window/vsync/vsync_mode=2
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/modular-settings-menu/plugin.cfg", "res://addons/quest_system/plugin.cfg")
 
+[global_group]
+
+fish=""
+player=""
+
 [gui]
 
 theme/custom_font="res://assets/fonts/base_font.tres"

@@ -73,7 +73,7 @@ text = "Story"
 
 [node name="Guys" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-text = "Lukas, Daniel, David & Alex"
+text = "Lukas, Daniel, David, Alex & Nico"
 horizontal_alignment = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
@@ -99,7 +99,7 @@ text = "Game name"
 
 [node name="Guys" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
-text = "ChatGPT"
+text = "Nico & ChatGPT"
 horizontal_alignment = 2
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
@@ -140,7 +140,7 @@ horizontal_alignment = 3
 
 [node name="Guys" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer6"]
 layout_mode = 2
-text = "Random Plugins & Nico"
+text = "Random Plugins, Nico & David"
 horizontal_alignment = 2
 
 [node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
