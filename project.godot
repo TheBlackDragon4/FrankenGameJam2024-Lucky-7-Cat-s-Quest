@@ -25,7 +25,6 @@ SettingsDataManager="*res://addons/modular-settings-menu/singletons/settings_dat
 Global="*res://global_scripts/global.gd"
 GamemodeHandler="*res://scripts/gamemode_handler.gd"
 time="*res://scripts/time_library.gd"
-Global="*res://global_scripts/global.gd"
 StaminaManager="*res://scenes/Stamina/StaminaManager.tscn"
 
 [display]
