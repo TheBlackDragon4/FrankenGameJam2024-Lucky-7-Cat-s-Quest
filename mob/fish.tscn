@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqg4pa7q1l3i6"]
+
+[ext_resource type="Texture2D" uid="uid://bp2wy7ylpuyg5" path="res://images/Tilemaps/Underwater/fish-dart.png" id="1_c22r4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qk57g"]
+size = Vector2(31, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a6k1"]
+atlas = ExtResource("1_c22r4")
+region = Rect2(0, 0, 39, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22k0x"]
+atlas = ExtResource("1_c22r4")
+region = Rect2(39, 0, 39, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pdeg"]
+atlas = ExtResource("1_c22r4")
+region = Rect2(78, 0, 39, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30cqg"]
+atlas = ExtResource("1_c22r4")
+region = Rect2(117, 0, 39, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vyh8m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a6k1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22k0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pdeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30cqg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fish" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_qk57g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_vyh8m")
+autoplay = "default"
+frame_progress = 0.341714
