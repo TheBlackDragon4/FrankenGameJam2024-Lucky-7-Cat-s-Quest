@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c2cojr3jh6feq"]
 
-[ext_resource type="Script" path="res://gui/lifebar.gd" id="1_84mco"]
+[ext_resource type="Script" path="res://gui/bars/lifebar.gd" id="1_84mco"]
 
 [node name="lifebar" type="HBoxContainer"]
 texture_filter = 1

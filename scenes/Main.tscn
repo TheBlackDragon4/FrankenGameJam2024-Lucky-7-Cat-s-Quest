@@ -1,4 +1,5 @@
-[gd_scene load_steps=19 format=4 uid="uid://frxh3f3tt7xi"]
+[gd_scene load_steps=29 format=4 uid="uid://frxh3f3tt7xi"]
+
 
 [ext_resource type="Texture2D" uid="uid://bmptr2au1cu8q" path="res://images/main-Scene/Main-Scene.jpg" id="1_w58nr"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xoiis"]
@@ -10,11 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://bwv07exma57ns" path="res://images/Tilemaps/walls/wooden_door.png" id="6_4h62c"]
 [ext_resource type="Texture2D" uid="uid://dansg185qe06l" path="res://images/Tilemaps/walls/wooden_door_b.png" id="7_63skh"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="8_01c2f"]
+[ext_resource type="PackedScene" uid="uid://rw7gdui8lu3n" path="res://addons/EasyMenus/Scenes/pause_menu.tscn" id="10_fnh3d"]
+[ext_resource type="PackedScene" uid="uid://c2cojr3jh6feq" path="res://gui/bars/hotbar.tscn" id="11_744mx"]
 [ext_resource type="PackedScene" uid="uid://c24kk85efm6h1" path="res://scenes/Inventory/items/postcard.tscn" id="12_va8pm"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_whtog"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yg6su"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uwuek"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hwfmm"]
 texture = ExtResource("3_s0emn")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -25,7 +28,7 @@ texture = ExtResource("3_s0emn")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lxb0q"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8wrqr"]
 texture = ExtResource("4_d5h1q")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
@@ -67,7 +70,7 @@ texture = ExtResource("4_d5h1q")
 3:4/0 = 0
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxot0"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wemyf"]
 texture = ExtResource("5_42ayh")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, 1.32433, -8, 1.32433)
@@ -128,12 +131,12 @@ texture = ExtResource("5_42ayh")
 5:5/0 = 0
 5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 0.706308, 8, 0.706308, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hxgvg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl4f0"]
 texture = ExtResource("6_4h62c")
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1gvfy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fyr2w"]
 texture = ExtResource("7_63skh")
 0:0/0 = 0
 1:0/0 = 0
@@ -141,12 +144,39 @@ texture = ExtResource("7_63skh")
 [sub_resource type="TileSet" id="TileSet_grj1u"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_whtog")
-sources/1 = SubResource("TileSetAtlasSource_uwuek")
-sources/2 = SubResource("TileSetAtlasSource_lxb0q")
-sources/3 = SubResource("TileSetAtlasSource_dxot0")
-sources/4 = SubResource("TileSetAtlasSource_hxgvg")
-sources/5 = SubResource("TileSetAtlasSource_1gvfy")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_yg6su")
+sources/1 = SubResource("TileSetAtlasSource_hwfmm")
+sources/2 = SubResource("TileSetAtlasSource_8wrqr")
+sources/3 = SubResource("TileSetAtlasSource_wemyf")
+sources/4 = SubResource("TileSetAtlasSource_cl4f0")
+sources/5 = SubResource("TileSetAtlasSource_fyr2w")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0x1fi"]
+size = Vector2(26, 174)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70m5u"]
+size = Vector2(149, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slnov"]
+size = Vector2(34.8438, 33.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7gj2"]
+size = Vector2(124, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4jb0"]
+size = Vector2(26, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_croac"]
+size = Vector2(56, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwwtd"]
+size = Vector2(3.75, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utmuu"]
+size = Vector2(484, 7.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whfls"]
+size = Vector2(133, 3)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_xoiis")
@@ -186,3 +216,66 @@ position = Vector2(-354, 47)
 position = Vector2(321, 198)
 scale = Vector2(0.102447, 0.0840463)
 zoom = Vector2(2, 2)
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+position = Vector2(91, 293)
+scale = Vector2(427.553, -1085.13)
+skew = 0.780162
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(-0.0157875, 0.031116)
+scale = Vector2(0.00233889, -0.00265291)
+skew = 1.06019
+shape = SubResource("RectangleShape2D_0x1fi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(0.0177125, 0.133539)
+scale = Vector2(0.00233889, -0.00265291)
+skew = 1.06019
+shape = SubResource("RectangleShape2D_70m5u")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(0.271567, 0.0661215)
+scale = Vector2(0.00233889, -0.00265291)
+skew = 1.06019
+shape = SubResource("RectangleShape2D_slnov")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(0.391436, 0.106961)
+scale = Vector2(0.00233889, -0.00265291)
+skew = 1.06019
+shape = SubResource("RectangleShape2D_j7gj2")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(0.950613, 0.054453)
+scale = Vector2(0.00233889, -0.00265291)
+skew = 1.06019
+shape = SubResource("RectangleShape2D_s4jb0")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(0.970202, 0.101127)
+scale = Vector2(0.00233889, -0.00265291)
+skew = 1.06019
+shape = SubResource("RectangleShape2D_croac")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(1.22543, -0.007779)
+scale = Vector2(0.00233889, -0.00265291)
+skew = 1.06019
+shape = SubResource("RectangleShape2D_jwwtd")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(0.777414, -0.0764935)
+scale = Vector2(0.00233889, -0.00265291)
+skew = 1.06019
+shape = SubResource("RectangleShape2D_utmuu")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(0.881507, -0.0136133)
+scale = Vector2(0.00233889, -0.00265291)
+skew = 1.06019
+shape = SubResource("RectangleShape2D_whfls")
+
+[editable path="PauseMenu"]

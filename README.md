@@ -1,4 +1,4 @@
-# FrankenGameJam2024
+# FrankenGameJam2024 - Lucky 7 Cat's Quest
 Programm source code for the Franken GameJam 2024
 
 # Game Idea

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dovvdaschyqm"]
+
+[ext_resource type="Script" path="res://gui/bars/stambar.gd" id="1_rsl2x"]
+
+[node name="Stambar" type="HBoxContainer"]
+script = ExtResource("1_rsl2x")
