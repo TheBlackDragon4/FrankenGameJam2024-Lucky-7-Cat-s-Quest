@@ -1,5 +1,6 @@
-[gd_scene load_steps=31 format=4 uid="uid://bcf6c0ghkv687"]
+[gd_scene load_steps=32 format=4 uid="uid://bcf6c0ghkv687"]
 
+[ext_resource type="PackedScene" uid="uid://b70mcnkjy13x3" path="res://gui/default_ui.tscn" id="1_0ryrq"]
 [ext_resource type="Texture2D" uid="uid://qii51n4l2jdk" path="res://images/Tilemaps/TopDown/Terrain/plains.png" id="2_chao5"]
 [ext_resource type="Texture2D" uid="uid://vmjxrax42nii" path="res://images/Tilemaps/TopDown/Terrain/Cliffs.png" id="3_3fu24"]
 [ext_resource type="Texture2D" uid="uid://bebgcabrinpi2" path="res://images/Tilemaps/TopDown/Objects/trees_small.png" id="3_dg7d8"]
@@ -1298,6 +1299,8 @@ sources/22 = SubResource("TileSetAtlasSource_742vr")
 sources/23 = SubResource("TileSetAtlasSource_pa447")
 
 [node name="Node2D" type="Node2D"]
+
+[node name="DefaultUIElements" parent="." instance=ExtResource("1_0ryrq")]
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
 
