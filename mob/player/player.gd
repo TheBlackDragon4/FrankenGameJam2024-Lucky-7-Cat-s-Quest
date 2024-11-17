@@ -45,7 +45,7 @@ func _physics_process(delta):
 					if StaminaManager.running == 0:
 						$AnimatedSprite2D.play("walk_left")
 					else:
-						$AnimatedSprite2D.play("run_right")
+						$AnimatedSprite2D.play("run_left")
 				else:
 					if Input.is_action_pressed("input_up"):
 						$AnimatedSprite2D.play("walk_up")
@@ -62,10 +62,18 @@ func _physics_process(delta):
 			if Input.is_action_just_pressed("input_action") and is_on_floor():
 				velocity.y = JUMP_VELOCITY
 			if not is_on_floor():
-				if velocity.y > 0:
-					$AnimatedSprite2D.play("jump")
+				if velocity.y < 0:
+					if velocity.x < 0: 
+						$AnimatedSprite2D.play("jump_left")
+					else:
+						$AnimatedSprite2D.play("jump_right")
+						
 				else:
-					$AnimatedSprite2D.play("fall")
+					if velocity.x < 0: 
+						$AnimatedSprite2D.play("fall_left")
+					else:
+						$AnimatedSprite2D.play("fall_right")
+							
 				#self.position += Vector2(0.0, -10.0)
 			
 			if Input.is_anything_pressed() == false and is_on_floor():
