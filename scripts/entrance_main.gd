@@ -23,14 +23,17 @@ func _ready():
 		interaction_area.interact = Callable(self, "_on_interact")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
 	if activate_on_collision:
-		await get_tree().create_timer(0.1).timeout
-		get_tree().change_scene_to_file(sceneChangePath + sceneChanger + sceneChangeExtention)
-		GamemodeHandler._update_gamemode(new_gamemode)
+		call_deferred("_change_scene")
+		# await get_tree().create_timer(0.1).timeout
+
+func _change_scene():
+	get_tree().change_scene_to_file(sceneChangePath + sceneChanger + sceneChangeExtention)
+	GamemodeHandler._update_gamemode(new_gamemode)
 	
 
 func _on_interact():	
