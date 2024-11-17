@@ -140,3 +140,11 @@ func get_damage():
 	hearts_container.update_hearts(GamemodeHandler.health)
 	print(str(GamemodeHandler.health) + " health remaining.")
 	
+
+
+func _on_pain_player_damaged():
+	get_damage()
+
+
+func _on_object_2_player_damaged():
+	get_damage()
