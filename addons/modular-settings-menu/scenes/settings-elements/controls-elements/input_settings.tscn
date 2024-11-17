@@ -85,10 +85,6 @@ func pressed() -> void:
 func apply_settings() -> void:
 	# Assign the events for the remappable actions
 	ElementPanelRef.update_action_events(inputSettingsData_)
-	
-	# Reload keybinds (e.g. when arcade mode was switched on or off)
-	load_settings()
-
 
 # Called to update the input settings data
 func panel_settings_changed(newValue_: Dictionary) -> void:
@@ -182,6 +178,8 @@ func set_arcade(state: bool):
 	var tmp: String = PATH
 	PATH = PATH_Arcade
 	PATH_Arcade = tmp
+	
+	load_settings()
 "
 
 [node name="InputSettings" type="Button"]
