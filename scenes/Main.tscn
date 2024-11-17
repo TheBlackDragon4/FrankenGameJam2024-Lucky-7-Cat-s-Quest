@@ -212,7 +212,7 @@ scale = Vector2(8, 8)
 [node name="Area2D" parent="." instance=ExtResource("12_va8pm")]
 position = Vector2(1268, 790)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D2" type="Camera2D" parent="."]
 position = Vector2(969, 634)
 scale = Vector2(0.102447, 0.0840463)
 zoom = Vector2(2, 2)

@@ -151,7 +151,7 @@ position = Vector2(70, 73)
 [node name="Player" parent="." instance=ExtResource("1_q2cl6")]
 position = Vector2(484, 394)
 
-[node name="Inv_UI" parent="Player" instance=ExtResource("2_t4i7u")]
+[node name="Inv_UI2" parent="Player" instance=ExtResource("2_t4i7u")]
 offset_left = -146.0
 offset_top = -121.0
 offset_right = -60.0
@@ -192,12 +192,3 @@ position = Vector2(788, 559)
 position = Vector2(595, 451)
 scale = Vector2(0.102447, 0.0840463)
 zoom = Vector2(2, 2)
-
-[editable path="Player/Inv_UI"]
-[editable path="Player/Inv_UI/NinePatchRect/Inv_UI_Slot1"]
-[editable path="Player/Inv_UI/NinePatchRect/Inv_UI_Slot2"]
-[editable path="Player/Inv_UI/NinePatchRect/Inv_UI_Slot3"]
-[editable path="Player/Inv_UI/NinePatchRect/Inv_UI_Slot4"]
-[editable path="Player/Inv_UI/NinePatchRect/Inv_UI_Slot5"]
-[editable path="Player/Inv_UI/NinePatchRect/Inv_UI_Slot6"]
-[editable path="Player/Inv_UI/NinePatchRect/Inv_UI_Slot7"]
