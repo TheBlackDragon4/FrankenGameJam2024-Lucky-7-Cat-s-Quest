@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://m7g6luq0mlvi"]
+
+[ext_resource type="Script" path="res://scripts/speaker_node.gd" id="1_q1ej6"]
+
+[node name="SpeakerNode" type="Node2D"]
+script = ExtResource("1_q1ej6")
+
+[node name="textbubble" type="Sprite2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="textbubble"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="avatar" type="Sprite2D" parent="."]
