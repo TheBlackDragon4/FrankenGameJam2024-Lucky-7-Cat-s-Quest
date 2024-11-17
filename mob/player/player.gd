@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 var speed = 300.0
 const JUMP_VELOCITY = -400.0
+@export var gamemode = 0
 
 @onready var hearts_container = $ui_layer/lifebar
 
@@ -16,7 +17,7 @@ func _physics_process(delta):
 			velocity += get_gravity() * delta
 		# Handle jump.
 		#if Input.is_action_just_pressed("jump"):
-		if GamemodeHandler.gamemode == 1:
+		if gamemode == 1:
 			speed = 100 * StaminaManager.get_speed()
 			
 			# Get the input direction and handle the movement/deceleration.
