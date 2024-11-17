@@ -266,10 +266,11 @@ script = ExtResource("1_ewrr2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_clefc")
-animation = &"run_right"
-frame_progress = 0.710513
+animation = &"idle"
+frame_progress = 0.63813
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 light_mask = 2
 shape = SubResource("RectangleShape2D_y22yq")
 

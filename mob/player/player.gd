@@ -18,7 +18,7 @@ func _physics_process(delta):
 		#if Input.is_action_just_pressed("jump"):
 		if Input.is_action_just_pressed("input_action") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
-			$AnimatedSprite2D.play("jump")
+			#$AnimatedSprite2D.play("jump")
 			
 			#self.position += Vector2(0.0, -10.0)
 		
@@ -53,5 +53,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
