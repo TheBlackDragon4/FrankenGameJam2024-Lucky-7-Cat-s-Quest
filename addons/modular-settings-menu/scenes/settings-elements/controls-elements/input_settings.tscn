@@ -21,6 +21,7 @@ var DATA_FOLDER: String = SettingsDataManager.DATA_FOLDER
 const FILE_NAME: String = \"keybinds\"
 const FILE_EXTENSION: String = \".json\"
 var PATH: String = DATA_FOLDER + \"/\" + FILE_NAME + FILE_EXTENSION
+var PATH_Arcade: String = \"res://etc/keybinds_arcade.json\"
 
 # Currently stored input data
 var inputSettingsData_: Dictionary
@@ -44,6 +45,8 @@ func _ready():
 
 # Loads the saved/default values of the element
 func load_settings() -> void:
+	print(\"Load key bindings: \", PATH)
+	
 	# Get the current value for the element
 	if noSaveFile:
 		# Get the events for the remappable actions from the project settings
@@ -154,6 +157,24 @@ func verify_settings_data(data_: Dictionary) -> void:
 			data_[action] = InputMap.action_get_events(action)[0]
 			invalidSaveFile = true
 			push_warning(\"Input action is missing: \", action)
+
+
+# Sollte erst bei Apply aufgerufen werden
+func set_arcade(state: bool):
+	print(\"Set arcade: \", state)
+	
+	if state:
+		noSaveFile = false
+	else:
+		if not FileAccess.file_exists(PATH):
+			noSaveFile = true
+	
+	# Swap paths
+	var tmp: String = PATH
+	PATH = PATH_Arcade
+	PATH_Arcade = tmp
+	
+	load_settings()
 "
 
 [node name="InputSettings" type="Button"]

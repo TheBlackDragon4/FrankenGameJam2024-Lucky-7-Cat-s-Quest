@@ -1,0 +1,26 @@
+{
+	"ui_up": {
+		"type": "keyboard",
+		"key": 4194320
+	},
+	"ui_down": {
+		"type": "keyboard",
+		"key": 4194322
+	},
+	"ui_left": {
+		"type": "keyboard",
+		"key": 4194319
+	},
+	"ui_right": {
+		"type": "keyboard",
+		"key": 4194321
+	},
+	"input_inventory": {
+		"type": "keyboard",
+		"key": 0
+	},
+	"input_action": {
+		"type": "keyboard",
+		"key": 0
+	}
+}

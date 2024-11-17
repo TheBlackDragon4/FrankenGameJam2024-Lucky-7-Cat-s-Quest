@@ -4,10 +4,20 @@
 resource_name = "toggle_element_template"
 script/source = "extends ToggleElement
 
+@onready var key_bindings_ref = $\"../SubSectionElements/InputSettings\"
 
 # Called to apply the setting to the game
 func _apply_settings() -> void:
-	pass
+	apply_in_game_setting(currentValue)
+
+
+func toggled(state: bool) -> void:
+	super(state)
+	
+	# Disable key bindings in arcade mode
+	key_bindings_ref.disabled = state
+	key_bindings_ref.set_arcade(state)
+	
 "
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drjjf"]
@@ -20,7 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_bpxmf")
 ToggleRef = NodePath("Toggle")
-IDENTIFIER = "ToggleTemplate"
+IDENTIFIER = "ArcadeMode"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
