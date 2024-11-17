@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://b74vtdpkay2nv"]
+[gd_scene load_steps=23 format=4 uid="uid://b74vtdpkay2nv"]
 
 [ext_resource type="Texture2D" uid="uid://bt8yigqt0slxs" path="res://images/Tilemaps/Middle.png" id="1_e7ll2"]
 [ext_resource type="Texture2D" uid="uid://3t8chqmfypk1" path="res://images/Tilemaps/decor_8x8.png" id="2_e7hfj"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://0d3ocfesr2ej" path="res://images/Tilemaps/Underwater/underwater.png" id="7_wbpjs"]
 [ext_resource type="Texture2D" uid="uid://x8kaejw5kt81" path="res://images/Tilemaps/Underwater/Pixel-16px Underwater/Pixel-16px Underwater/tileset/tileset.png" id="8_k4p8n"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="8_p7uvn"]
+[ext_resource type="PackedScene" uid="uid://bcnlxhaiw2h1d" path="res://scenes/Music/audio_stream_player.tscn" id="11_32d0t"]
+[ext_resource type="AudioStream" uid="uid://2b4magmr1dpk" path="res://sounds/LOOP_Let's Go Underwater!.wav" id="12_ikfqh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_whtog"]
 
@@ -262,3 +264,6 @@ position = Vector2(769, 363)
 
 [node name="Player" parent="." instance=ExtResource("8_p7uvn")]
 position = Vector2(309, 18)
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("11_32d0t")]
+stream = ExtResource("12_ikfqh")

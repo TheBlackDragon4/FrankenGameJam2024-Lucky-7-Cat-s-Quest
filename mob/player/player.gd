@@ -110,3 +110,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
+
+
+func _on_static_body_2d_player_damaged() -> void:
+	get_damage()
+
+func _on_object_player_damaged() -> void:
+	get_damage()
+
+func get_damage():
+	GamemodeHandler._on_player_damaged()
+	hearts_container.update_hearts(GamemodeHandler.health)
+	print(str(GamemodeHandler.health) + " health remaining.")
+	

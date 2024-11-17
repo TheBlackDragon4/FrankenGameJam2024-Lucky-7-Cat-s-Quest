@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dq6tvhqcy2aps"]
+[gd_scene load_steps=7 format=3 uid="uid://dq6tvhqcy2aps"]
 
 [ext_resource type="Script" path="res://addons/EasyMenus/Scripts/main_menu_controller.gd" id="1_lbw7r"]
 [ext_resource type="Texture2D" uid="uid://dqch5ju7j5ixv" path="res://images/title/title.png" id="2_02aw4"]
 [ext_resource type="PackedScene" uid="uid://qlskttl1wjr7" path="res://addons/EasyMenus/Scenes/options_menu.tscn" id="2_pwqpr"]
 [ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="3_slls3"]
+[ext_resource type="PackedScene" uid="uid://bcnlxhaiw2h1d" path="res://scenes/Music/audio_stream_player.tscn" id="5_3vi62"]
+[ext_resource type="AudioStream" uid="uid://cxo4ktdkicf5g" path="res://sounds/LOOP_Happy Quest.wav" id="6_onnwh"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -83,6 +85,9 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 1
 MenuPanelRef = NodePath("..")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("5_3vi62")]
+stream = ExtResource("6_onnwh")
 
 [connection signal="pressed" from="Content/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="Content/HBoxContainer/OptionsButton" to="." method="open_options"]

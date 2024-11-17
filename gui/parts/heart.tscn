@@ -38,5 +38,5 @@ centered = false
 
 [node name="heart" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2lgao")
-animation = &"empty"
+animation = &"full"
 centered = false
