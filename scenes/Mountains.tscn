@@ -1250,6 +1250,7 @@ texture = ExtResource("2_biyvc")
 modulate = Color(0, 0.485494, 0.485645, 1)
 z_index = 1
 position = Vector2(148, 454)
+metadata/postcard_index = 6
 
 [node name="Player" parent="." instance=ExtResource("4_lp8h1")]
 z_index = 1
