@@ -30,13 +30,11 @@ func _on_body_entered(body: Node2D) -> void:
 	if activate_on_collision:
 		call_deferred("_change_scene")
 		# await get_tree().create_timer(0.1).timeout
+		
+		
+func _on_interact():	
+	call_deferred("_change_scene")
 
 func _change_scene():
 	get_tree().change_scene_to_file(sceneChangePath + sceneChanger + sceneChangeExtention)
-	GamemodeHandler._update_gamemode(new_gamemode)
 	
-
-func _on_interact():	
-	get_tree().change_scene_to_file(sceneChangePath + sceneChanger + sceneChangeExtention)
-	GamemodeHandler._update_gamemode(new_gamemode)
-	#GamemodeHandler.isFreezed = true

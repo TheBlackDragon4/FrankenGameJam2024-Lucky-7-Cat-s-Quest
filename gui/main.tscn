@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://c8unad54gipfx"]
+[gd_scene load_steps=28 format=4 uid="uid://xe8durajt7oh"]
 
 [ext_resource type="Texture2D" uid="uid://k0x8alp7r0n" path="res://images/Tilemaps/TopDown/Floors/flooring.png" id="3_gb805"]
 [ext_resource type="Texture2D" uid="uid://br1dcxqvq1cff" path="res://images/Tilemaps/TopDown/Floors/wooden.png" id="4_y6887"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ciifypgdoog55" path="res://images/Tilemaps/TopDown/Walls/wooden_door_closed.png" id="12_xfmpq"]
 [ext_resource type="Texture2D" uid="uid://22w88qv1n0bt" path="res://images/Tilemaps/TopDown/Walls/wooden_door_open.png" id="13_2kcyr"]
 [ext_resource type="Texture2D" uid="uid://qii51n4l2jdk" path="res://images/Tilemaps/TopDown/Terrain/plains.png" id="14_4dl2m"]
-[ext_resource type="PackedScene" uid="uid://prhblc57ghqu" path="res://gui/player_npc.tscn" id="14_lnxyn"]
+[ext_resource type="PackedScene" path="res://gui/player_npc.tscn" id="14_lnxyn"]
 [ext_resource type="PackedScene" uid="uid://dq6tvhqcy2aps" path="res://addons/EasyMenus/Scenes/main_menu.tscn" id="14_lvrs2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_satwc"]

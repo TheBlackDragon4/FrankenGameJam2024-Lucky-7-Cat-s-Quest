@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://v5cxloahg4oq"]
+[gd_scene load_steps=8 format=3 uid="uid://bgt0e6rxsslqm"]
 
 [ext_resource type="Script" path="res://scripts/entrance_main.gd" id="1_gehnf"]
 [ext_resource type="Texture2D" uid="uid://ciifypgdoog55" path="res://images/Tilemaps/TopDown/Walls/wooden_door_closed.png" id="2_upmas"]
