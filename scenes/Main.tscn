@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://frxh3f3tt7xi"]
+[gd_scene load_steps=18 format=4 uid="uid://frxh3f3tt7xi"]
 
 [ext_resource type="Texture2D" uid="uid://bmptr2au1cu8q" path="res://images/main-Scene/Main-Scene.jpg" id="1_w58nr"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xoiis"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dansg185qe06l" path="res://images/Tilemaps/walls/wooden_door_b.png" id="7_63skh"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="8_01c2f"]
 [ext_resource type="PackedScene" uid="uid://rw7gdui8lu3n" path="res://addons/EasyMenus/Scenes/pause_menu.tscn" id="10_fnh3d"]
-[ext_resource type="PackedScene" uid="uid://c2cojr3jh6feq" path="res://gui/hotbar.tscn" id="11_744mx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_whtog"]
 
@@ -194,18 +193,5 @@ offset_left = -960.0
 offset_top = -540.0
 offset_right = 960.0
 offset_bottom = 540.0
-
-[node name="ui_layer" type="CanvasLayer" parent="."]
-
-[node name="lifebar" parent="ui_layer" instance=ExtResource("11_744mx")]
-anchors_preset = 0
-anchor_left = 0.0
-anchor_right = 0.0
-offset_left = 17.0
-offset_top = 15.0
-offset_right = 56.0
-offset_bottom = 24.0
-grow_horizontal = 1
-scale = Vector2(8, 8)
 
 [editable path="PauseMenu"]

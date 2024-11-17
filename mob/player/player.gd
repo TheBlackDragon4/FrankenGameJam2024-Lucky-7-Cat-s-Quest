@@ -4,6 +4,9 @@ extends CharacterBody2D
 var speed = 300.0
 const JUMP_VELOCITY = -400.0
 
+@onready var hearts_container = $ui_layer/lifebar
+
+var isFreezed = false
 
 func _physics_process(delta):
 	if not GamemodeHandler.isFreezed:
@@ -76,7 +79,9 @@ func _physics_process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	hearts_container.set_max_hearts(7)
+	hearts_container.update_hearts(5)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
