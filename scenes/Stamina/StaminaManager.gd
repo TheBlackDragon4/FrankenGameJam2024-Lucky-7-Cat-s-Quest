@@ -7,12 +7,10 @@ var climb_speed = -0.5
 var running = 0 #false
 var climbing = 0 #false
 var constitution = 10    #determins the loss speed and regeneration speed
-var drain_speed = 0
-var regeneration_value = 0
+var recharging = false
 var update_time = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	regeneration_value = constitution*0.1-0.1 * drain_speed
 	pass # Replace with function body.
 
 func _start_climb():
@@ -23,13 +21,20 @@ func _stop_climb():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if stamina > 1 and Input.is_action_pressed("input_sprint"):
+	if recharging:
+		stamina = stamina + delta * constitution * .1
+		stamina = max(0, min(stamina_max, stamina))
+		return
+		
+	if Input.is_action_pressed("input_sprint"):
 		running = 1
-		print (running)
-	var change = 1 - running*2 - climbing * 10
-	stamina = stamina + delta * constitution * .1
+	else:
+		running = 0
+	var change = 0 - running*2 - climbing * 10
+	stamina = stamina + delta * constitution * .1 + delta * change
 	stamina = max(0, min(stamina_max, stamina))
 	if stamina == 0:
+		exhaust()
 		running = 0 #false
 		climbing = 0 #false
 	var current_timestamp = Time.get_unix_time_from_system()
@@ -39,7 +44,15 @@ func _process(delta: float) -> void:
 	
 func get_speed():
 	if (running+climbing) > 0:
-		print((1 + run_speed*running) * (1 + climb_speed*climbing))
 		return (1 + run_speed*running) * (1 + climb_speed*climbing)
 	else:
 		return 1
+
+func exhaust():
+	if recharging:
+		return
+	print("exhausted.")
+	recharging = true
+	await get_tree().create_timer(5).timeout
+	recharging = false
+	print("regained Energy")

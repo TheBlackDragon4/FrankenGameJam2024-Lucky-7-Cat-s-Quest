@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bohnk0j0uxv0c"]
+
+[ext_resource type="Script" path="res://gui/parts/stam.gd" id="1_ydqqy"]
+[ext_resource type="Texture2D" uid="uid://b3hh34nxofyyn" path="res://gui/parts/Stamina Fish .png" id="2_1tyky"]
+
+[node name="frame" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+custom_minimum_size = Vector2(8, 8)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_ydqqy")
+
+[node name="stam_bg" type="Sprite2D" parent="."]
+centered = false
+
+[node name="stam" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1tyky")
+centered = false

@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dansg185qe06l" path="res://images/Tilemaps/walls/wooden_door_b.png" id="7_63skh"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="8_01c2f"]
 [ext_resource type="PackedScene" uid="uid://rw7gdui8lu3n" path="res://addons/EasyMenus/Scenes/pause_menu.tscn" id="10_fnh3d"]
-[ext_resource type="PackedScene" uid="uid://c2cojr3jh6feq" path="res://gui/hotbar.tscn" id="11_744mx"]
+[ext_resource type="PackedScene" uid="uid://c2cojr3jh6feq" path="res://gui/bars/hotbar.tscn" id="11_744mx"]
 [ext_resource type="PackedScene" uid="uid://c24kk85efm6h1" path="res://scenes/Inventory/items/postcard.tscn" id="12_va8pm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_whtog"]
