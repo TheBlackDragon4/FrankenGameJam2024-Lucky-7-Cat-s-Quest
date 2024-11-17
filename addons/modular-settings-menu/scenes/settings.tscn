@@ -25,6 +25,7 @@ script = ExtResource("1_crapp")
 
 [node name="ShapeCast2D" type="ColorRect" parent="."]
 self_modulate = Color(0.0745098, 0.0745098, 0.0745098, 0.290196)
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
