@@ -39,3 +39,8 @@ func _on_interact():
 func event():
 	print("SHOOT EM TO THE SKYYY")
 	player_damaged.emit()
+	
+	var tex = load("res://images/icons/postcard.png")
+	var bigtex = load("res://images/postcards/postcard_dead_big.png")
+	var name = "Dead"
+	Global.inv.items[0] = InvItem.new(name, tex, bigtex)
