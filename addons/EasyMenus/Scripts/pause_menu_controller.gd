@@ -4,7 +4,7 @@ signal back_to_main_pressed
 
 
 @onready var content : VBoxContainer = $%Content
-@onready var options_menu : Control = $%OptionsMenu
+@onready var options_menu : Control = $%Settings #OptionsMenu
 @onready var resume_game_button: Button = $%ResumeGameButton
 	
 func open_pause_menu():
@@ -25,7 +25,7 @@ func _on_resume_game_button_pressed():
 func _on_options_button_pressed():
 	content.hide()
 	options_menu.show()
-	options_menu.on_open()
+	#options_menu.on_open()
 
 
 func _on_options_menu_close():
