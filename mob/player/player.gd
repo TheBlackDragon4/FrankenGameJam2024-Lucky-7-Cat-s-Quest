@@ -79,7 +79,7 @@ func _physics_process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	hearts_container.set_max_hearts(7)
 
 
 

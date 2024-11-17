@@ -1,6 +1,6 @@
 [gd_scene load_steps=54 format=3 uid="uid://prhblc57ghqu"]
 
-[ext_resource type="Script" path="res://mob/player/player.gd" id="1_f6ket"]
+[ext_resource type="Script" path="res://gui/player_npc.gd" id="1_esjkc"]
 [ext_resource type="Texture2D" uid="uid://ncisd8t8s1s6" path="res://images/cat/jump-fall.png" id="2_ftuxy"]
 [ext_resource type="Texture2D" uid="uid://fo4gnr1iuhmw" path="res://images/cat/Idle.png" id="3_k8k8v"]
 [ext_resource type="Texture2D" uid="uid://bua0gu8ygoc8y" path="res://images/cat/jump_left.png" id="4_0sw0g"]
@@ -356,7 +356,7 @@ animations = [{
 radius = 7.86111
 
 [node name="NPC" type="CharacterBody2D"]
-script = ExtResource("1_f6ket")
+script = ExtResource("1_esjkc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -377,7 +377,6 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_left_margin = 0.5
-drag_top_margin = 0.5
-drag_right_margin = 0.5
-drag_bottom_margin = 0.5
+drag_top_margin = 0.1
+drag_right_margin = 0.4
+drag_bottom_margin = 0.3
