@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://be1vb1pji0m12" path="res://images/cat/walk_right.png" id="7_o88ai"]
 [ext_resource type="Texture2D" uid="uid://dbaaeuo8vew7d" path="res://images/cat/walk_up.png" id="8_mbnw6"]
 [ext_resource type="PackedScene" uid="uid://8152nqo5ofbu" path="res://scenes/Inventory/inv_ui.tscn" id="9_w15es"]
-[ext_resource type="PackedScene" uid="uid://c2cojr3jh6feq" path="res://gui/hotbar.tscn" id="9_wilyx"]
+[ext_resource type="PackedScene" uid="uid://c2cojr3jh6feq" path="res://gui/bars/hotbar.tscn" id="9_wilyx"]
+[ext_resource type="PackedScene" uid="uid://dovvdaschyqm" path="res://gui/bars/stambar.tscn" id="11_6sx76"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lurx5"]
 atlas = ExtResource("2_y15er")
@@ -363,7 +364,7 @@ script = ExtResource("1_ewrr2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_clefc")
-animation = &"fall"
+animation = &"run_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
@@ -390,4 +391,11 @@ offset_top = 16.0
 offset_right = 55.0
 offset_bottom = 25.0
 grow_horizontal = 1
-scale = Vector2(8, 8)
+scale = Vector2(6, 6)
+
+[node name="Stambar" parent="ui_layer" instance=ExtResource("11_6sx76")]
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 16.0
+offset_bottom = 80.0
+scale = Vector2(4, 4)
