@@ -5,7 +5,6 @@ var sceneChangeExtention = ".tscn"
 @export var sceneChanger: String = ""
 @export var activate_on_collision: bool = true
 @export var hide_sprites: bool = false
-@export var new_gamemode: int = 0
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var sprite_open: Sprite2D = $SpriteOpen

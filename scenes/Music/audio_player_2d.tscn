@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbpr4mf1kmca2"]
+
+[ext_resource type="AudioStream" uid="uid://cxo4ktdkicf5g" path="res://sounds/LOOP_Happy Quest.wav" id="1_aas6f"]
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_aas6f")
+autoplay = true
