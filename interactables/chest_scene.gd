@@ -15,7 +15,7 @@ func _on_interact():
 	event_collision.disabled = true
 
 	var tex = load("res://images/icons/postcard.png")
-	var bigtex = load("res://images/icons/chest.jpg")
+	var bigtex = load("res://images/postcards/postcard_chest_big.png")
 	var name = "Chest"
 	Global.inv.items[3] = InvItem.new("Chest", tex, bigtex)
 	

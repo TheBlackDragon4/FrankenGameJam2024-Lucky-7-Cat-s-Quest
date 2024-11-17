@@ -43,6 +43,7 @@ func _on_back_to_menu_button_pressed():
 	get_tree().change_scene_to_file("res://gui/main.tscn")
 
 func _input(event):
-	if (event.is_action_pressed("ui_cancel") or event.is_action_pressed("pause")) and visible and !options_menu.visible:
+	if (event.is_action_pressed("ui_cancel")) and visible and !options_menu.visible:
+	#if (event.is_action_pressed("ui_cancel") or event.is_action_pressed("pause")) and visible and !options_menu.visible:
 		accept_event()
 		close_pause_menu()

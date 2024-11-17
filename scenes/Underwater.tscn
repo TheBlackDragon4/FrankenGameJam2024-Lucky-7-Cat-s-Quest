@@ -139,6 +139,7 @@ texture = ExtResource("1_3vnpc")
 [node name="Postcard" parent="." instance=ExtResource("7_1tlrk")]
 modulate = Color(0, 0.485494, 0.485645, 1)
 position = Vector2(769, 363)
+metadata/postcard_index = 1
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("8_p7uvn")]
 position = Vector2(144, 251)
@@ -175,7 +176,7 @@ position = Vector2(406, 341)
 position = Vector2(611, 288)
 
 [node name="Fish4" parent="." instance=ExtResource("15_acr2r")]
-position = Vector2(309, 18)
+position = Vector2(492, 349)
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("11_32d0t")]
 stream = ExtResource("12_ikfqh")

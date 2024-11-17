@@ -238,7 +238,7 @@ offset_top = 60.0
 offset_right = 1070.0
 offset_bottom = 726.0
 scale = Vector2(0.196237, 0.158742)
-expand_mode = 4
+expand_mode = 2
 
 [editable path="NinePatchRect/Inv_UI_Slot1"]
 [editable path="NinePatchRect/Inv_UI_Slot2"]
