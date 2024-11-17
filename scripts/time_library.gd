@@ -1,14 +1,16 @@
-extends Node2D
+extends Node
 
-@onready var hearts_container = $ui_layer/lifebar
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	hearts_container.set_max_hearts(7)
+	pass # Replace with function body.
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause"):
-		$PauseMenu.open_pause_menu()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func wait(t):
+	await get_tree().create_timer(t).timeout
+func time():
+	Time.get_unix_time_from_system()

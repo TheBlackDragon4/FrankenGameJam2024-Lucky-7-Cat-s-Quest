@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://egesikv1ec5t"]
+[gd_scene load_steps=42 format=3 uid="uid://egesikv1ec5t"]
 
 [ext_resource type="Script" path="res://mob/player/player.gd" id="1_ewrr2"]
 [ext_resource type="Texture2D" uid="uid://fo4gnr1iuhmw" path="res://images/cat/Idle.png" id="2_r7fdg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b8fry2dd4laff" path="res://images/cat/walk_left.png" id="6_38it1"]
 [ext_resource type="Texture2D" uid="uid://be1vb1pji0m12" path="res://images/cat/walk_right.png" id="7_o88ai"]
 [ext_resource type="Texture2D" uid="uid://dbaaeuo8vew7d" path="res://images/cat/walk_up.png" id="8_mbnw6"]
+[ext_resource type="PackedScene" uid="uid://8152nqo5ofbu" path="res://scenes/Inventory/inv_ui.tscn" id="9_w15es"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pittb"]
 atlas = ExtResource("2_r7fdg")
@@ -257,8 +258,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y22yq"]
-size = Vector2(28, 26)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wp36s"]
+radius = 7.86111
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ewrr2")
@@ -271,6 +272,14 @@ frame_progress = 0.710513
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
-shape = SubResource("RectangleShape2D_y22yq")
+scale = Vector2(1.6, 1.6)
+shape = SubResource("CircleShape2D_wp36s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="Inv_UI" parent="." instance=ExtResource("9_w15es")]
