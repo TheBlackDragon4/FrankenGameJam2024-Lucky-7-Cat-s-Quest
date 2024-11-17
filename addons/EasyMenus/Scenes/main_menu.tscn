@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="3_slls3"]
 [ext_resource type="PackedScene" uid="uid://kl1rhxon4i4u" path="res://scenes/credits.tscn" id="4_jno7n"]
 [ext_resource type="Script" path="res://scenes/credits.gd" id="5_3v0kb"]
+[ext_resource type="PackedScene" uid="uid://bcnlxhaiw2h1d" path="res://scenes/Music/audio_stream_player.tscn" id="5_3vi62"]
+[ext_resource type="AudioStream" uid="uid://cxo4ktdkicf5g" path="res://sounds/LOOP_Happy Quest.wav" id="6_onnwh"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -105,6 +107,9 @@ layout_mode = 1
 MenuPanelRef = NodePath("..")
 
 [connection signal="close" from="Credits" to="." method="close_credits"]
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("5_3vi62")]
+stream = ExtResource("6_onnwh")
+
 [connection signal="pressed" from="Content/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="Content/OptionsButton" to="." method="open_options"]
 [connection signal="pressed" from="Content/HBoxContainer/CreditsButton" to="." method="open_credits"]

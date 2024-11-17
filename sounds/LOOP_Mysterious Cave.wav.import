@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://brthwqbd1ese"
+path="res://.godot/imported/LOOP_Mysterious Cave.wav-c0bf18b9aa3eb6e839ff3bfcf01e56e9.sample"
+
+[deps]
+
+source_file="res://sounds/LOOP_Mysterious Cave.wav"
+dest_files=["res://.godot/imported/LOOP_Mysterious Cave.wav-c0bf18b9aa3eb6e839ff3bfcf01e56e9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
