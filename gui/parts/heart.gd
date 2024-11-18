@@ -15,4 +15,8 @@ func _process(_delta: float) -> void:
 # 0: Empty
 # 1: Full
 func update(animation: String):
-	sprite.play(animation)
+	$heart.play(animation)
+	if animation == "empty":
+		sprite.visible = false
+	else:
+		sprite.visible = true
