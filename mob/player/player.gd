@@ -7,9 +7,18 @@ var isFreezed = false
 @export var gamemode = 0
 
 @onready var hearts_container = $ui_layer/lifebar
+var instantiated = false
 
 
 var fishes: int = 4
+
+func _enter_tree():
+	print("Player entered tree")
+	#if GamemodeHandler.health > 0:
+		#print("updated hearts")
+		#hearts_container.update_hearts()
+	#if instantiated:
+		#print("entered tree")
 
 func _physics_process(delta):
 	if not isFreezed:
@@ -106,12 +115,14 @@ func _physics_process(delta):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hearts_container.set_max_hearts(7)
+	instantiated = true
 
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	#hearts_container.update_hearts()
 	pass
 
 
@@ -137,7 +148,8 @@ func _on_object_player_damaged() -> void:
 
 func get_damage():
 	GamemodeHandler._on_player_damaged()
-	hearts_container.update_hearts(GamemodeHandler.health)
+	hearts_container.update_hearts()
+	#hearts_container.update_hearts(GamemodeHandler.health)
 	print(str(GamemodeHandler.health) + " health remaining.")
 	
 

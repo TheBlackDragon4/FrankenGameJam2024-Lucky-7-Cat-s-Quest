@@ -19,6 +19,17 @@ func _on_player_damaged():
 	health = health - 1
 	if health > 0:
 		get_tree().reload_current_scene()
+		
+		#var player
+		#player = get_node("Player")
+		#player.find_child("ui_layer/lifebar").update_hearts()
+		#var player
+		#player = find_child("Player", true)  # Zuweisung separat
+		#if player:
+			#print("Player gefunden")
+			#print(player.hearts_container)
+		#var hearts_container = $ui_layer/lifebar
+		#$Player.hearts_container.update_hearts()
 	else:
 		death()
 	print("remaining health: " + str(health))

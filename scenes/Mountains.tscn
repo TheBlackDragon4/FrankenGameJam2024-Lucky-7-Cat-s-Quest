@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=4 uid="uid://cch4in63nidla"]
+[gd_scene load_steps=25 format=4 uid="uid://cch4in63nidla"]
 
 [ext_resource type="Texture2D" uid="uid://cr52pq1wuml0p" path="res://images/Tilemaps/worlds/mountain background/Mountain-Dusk.png" id="1_f10bt"]
+[ext_resource type="Script" path="res://scenes/mountains.gd" id="1_kc2up"]
 [ext_resource type="Texture2D" uid="uid://ncr406ndikxp" path="res://images/Tilemaps/worlds/water/background/sand.png" id="2_biyvc"]
 [ext_resource type="PackedScene" uid="uid://c24kk85efm6h1" path="res://scenes/Inventory/items/postcard.tscn" id="3_djkml"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="4_lp8h1"]
@@ -1233,6 +1234,7 @@ sources/9 = SubResource("TileSetAtlasSource_l2sas")
 sources/10 = SubResource("TileSetAtlasSource_db7aa")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_kc2up")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false

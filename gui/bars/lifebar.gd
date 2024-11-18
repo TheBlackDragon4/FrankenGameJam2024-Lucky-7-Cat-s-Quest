@@ -2,7 +2,6 @@ extends HBoxContainer
 
 @onready var heart_gui_class = preload("res://gui/parts/heart.tscn")
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -18,8 +17,10 @@ func set_max_hearts(maxNum: int) -> void:
 		add_child(heart)
 		
 
-func update_hearts(current_health: int):
+func update_hearts():
+#func update_hearts(current_health: int):
 	var hearts = get_children()
+	var current_health = GamemodeHandler.health
 	
 	for heart in hearts:
 		heart.update("full")
@@ -29,7 +30,6 @@ func update_hearts(current_health: int):
 	
 func _on_player_damaged():
 	print("Current Health: " + str(GamemodeHandler.health))
-	print("Current Health: " + str(GamemodeHandler.health))
-	update_hearts(GamemodeHandler.health)
+	update_hearts()
 	print("Current Health: " + str(GamemodeHandler.health))
 	

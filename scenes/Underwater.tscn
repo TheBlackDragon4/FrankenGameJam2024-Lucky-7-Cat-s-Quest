@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=4 uid="uid://b74vtdpkay2nv"]
+[gd_scene load_steps=17 format=4 uid="uid://b74vtdpkay2nv"]
 
 [ext_resource type="Texture2D" uid="uid://ncr406ndikxp" path="res://images/Tilemaps/worlds/water/background/sand.png" id="1_3vnpc"]
+[ext_resource type="Script" path="res://scenes/underwater.gd" id="1_xajuq"]
 [ext_resource type="PackedScene" uid="uid://c24kk85efm6h1" path="res://scenes/Inventory/items/postcard.tscn" id="7_1tlrk"]
 [ext_resource type="PackedScene" uid="uid://egesikv1ec5t" path="res://mob/player/player.tscn" id="8_p7uvn"]
 [ext_resource type="PackedScene" uid="uid://bgt0e6rxsslqm" path="res://scenes/entrance_template_interactable.tscn" id="10_butik"]
@@ -125,6 +126,7 @@ sources/1 = SubResource("TileSetAtlasSource_cv3c4")
 sources/2 = SubResource("TileSetAtlasSource_bysp0")
 
 [node name="Node2D2" type="Node2D"]
+script = ExtResource("1_xajuq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(425.306, 394.684)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://fetm1t81vuin"]
+[gd_scene load_steps=18 format=4 uid="uid://fetm1t81vuin"]
 
+[ext_resource type="Script" path="res://scenes/dungeon.gd" id="1_hary6"]
 [ext_resource type="Texture2D" uid="uid://cr52pq1wuml0p" path="res://images/Tilemaps/worlds/mountain background/Mountain-Dusk.png" id="1_ubdn3"]
 [ext_resource type="Texture2D" uid="uid://ncr406ndikxp" path="res://images/Tilemaps/worlds/water/background/sand.png" id="2_roess"]
 [ext_resource type="PackedScene" uid="uid://c24kk85efm6h1" path="res://scenes/Inventory/items/postcard.tscn" id="3_x8e5v"]
@@ -2775,6 +2776,7 @@ sources/2 = SubResource("TileSetAtlasSource_6gn75")
 sources/3 = SubResource("TileSetAtlasSource_xe83m")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_hary6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false

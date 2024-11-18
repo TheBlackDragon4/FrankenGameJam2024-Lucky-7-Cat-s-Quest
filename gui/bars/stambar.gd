@@ -23,12 +23,12 @@ func _process(_delta: float) -> void:
 
 func set_max_stamina(maxNum: int) -> void:
 	for i in range(maxNum):
-		var heart = stam_gui_class.instantiate()
-		add_child(heart)
+		var fish = stam_gui_class.instantiate()
+		add_child(fish)
 
 
 func update_stamina(current_health: int):
-	var hearts = get_children()
+	var fishes = get_children()
 	
-	for heart in hearts:
-		heart.update("full")
+	for fish in fishes:
+		fish.update("full")
