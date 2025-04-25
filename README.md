@@ -1,6 +1,8 @@
 # FrankenGameJam2024 - Lucky 7 Cat's Quest
 Programm source code for the Franken GameJam 2024
 
+Spielname: Lucky 7 Cat's Quest
+
 # Game Idea
 
 We have cat, let's call her "Luna". Luna has - such as every other cat - 7 lives. 7 lives, in which she needs to finish curtain challenges to collect 7 postcards. Every life she basically starts at zero and needs to train skills to fullfil all challenges.
@@ -31,3 +33,6 @@ In settings, you can switch on Arcade Mode to be able to control the game using 
 | U | open and close inventory |
 | H | interact with objects in the world |
 | ESC | Pause game/enter options |
+
+# Used development engine: 
+- Godot Version 4.3
