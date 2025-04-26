@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq6tvhqcy2aps"]
+[gd_scene load_steps=9 format=3 uid="uid://dq6tvhqcy2aps"]
 
 [ext_resource type="Script" path="res://addons/EasyMenus/Scripts/main_menu_controller.gd" id="1_lbw7r"]
 [ext_resource type="Texture2D" uid="uid://dqch5ju7j5ixv" path="res://images/title/title.png" id="2_02aw4"]
@@ -24,10 +24,23 @@ visible = false
 layout_mode = 1
 script = ExtResource("5_3v0kb")
 
-[node name="Title" type="Sprite2D" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Sprite2D" parent="Control"]
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0.92549)
-position = Vector2(960, 260)
 scale = Vector2(0.36, 0.36)
 texture = ExtResource("2_02aw4")
 
@@ -106,10 +119,10 @@ visible = false
 layout_mode = 1
 MenuPanelRef = NodePath("..")
 
-[connection signal="close" from="Credits" to="." method="close_credits"]
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("5_3vi62")]
 stream = ExtResource("6_onnwh")
 
+[connection signal="close" from="Credits" to="." method="close_credits"]
 [connection signal="pressed" from="Content/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="Content/OptionsButton" to="." method="open_options"]
 [connection signal="pressed" from="Content/HBoxContainer/CreditsButton" to="." method="open_credits"]
